@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>روز من ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#F7F7F7;--card:#FFF;--r:18px;--sh:0 2px 16px rgba(0,0,0,.06);
+  --c1:#FF3B3B;--c1l:#FFF0F0;
+  --c2:#FF9500;--c2l:#FFF8EE;
+  --c3:#6B4EFF;--c3l:#F0EDFF;
+  --c4:#00C9A7;--c4l:#E6FAF6;
+  --c5:#E91E8C;--c5l:#FFF0F8;
+  --c6:#2979FF;--c6l:#EEF4FF;
+  --c7:#2ECC71;--c7l:#EDFAF3;
+  --c8:#FF6D00;--c8l:#FFF4E5;
+  --c9:#9C27B0;--c9l:#F8F0FF;
+  --ca:#00897B;--cal:#E0F7FA;
+  --txt:#111;--txm:#666;--txl:#BBB;
+}
+body{font-family:'Vazirmatn',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;max-width:480px;margin:0 auto;padding-bottom:84px}
+
+/* NAV */
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:2px solid #F0F0F0;display:flex;z-index:300;padding-bottom:env(safe-area-inset-bottom,0)}
+.nb{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0;border:none;background:none;cursor:pointer;font-family:inherit;font-size:8.5px;font-weight:900;color:var(--txl);transition:all .2s;letter-spacing:.04em;text-transform:uppercase}
+.nb .ic{font-size:19px;line-height:1;transition:transform .2s}
+.nb.on{color:#111}.nb.on .ic{transform:scale(1.15)}
+
+/* PAGES */
+.pg{display:none;padding:16px;animation:up .22s ease}
+.pg.on{display:block}
+@keyframes up{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+
+/* CARD */
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);margin-bottom:12px;overflow:hidden}
+.ch{display:flex;align-items:center;justify-content:space-between;padding:13px 16px 11px;cursor:pointer;user-select:none;border-bottom:0}
+.ct{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:800}
+.dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.cm{font-size:11px;color:var(--txl);font-weight:600}
+.arr{font-size:11px;color:var(--txl);transition:transform .2s;margin-right:2px}
+.card.col .arr{transform:rotate(180deg)}
+.card.col .cb{display:none}
+.cb{padding:0 12px 12px}
+
+/* CHECKLIST */
+.ci{display:flex;align-items:center;gap:11px;padding:10px 4px;border-bottom:1px solid #F5F5F5;cursor:pointer}
+.ci:last-child{border-bottom:none}
+.ci.done{opacity:.28}
+.ci.done .il{text-decoration:line-through}
+.ci.done .bx{border-color:transparent!important}
+.bx{width:27px;height:27px;border-radius:8px;border:2.5px solid #E0E0E0;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;transition:all .2s}
+.il{font-size:13.5px;line-height:1.4;flex:1}
+
+/* colors */
+.sm .ch{background:var(--c1l)}.sm .dot{background:var(--c1)}.sm .ci.done .bx{background:var(--c1)}
+.sn .ch{background:var(--c2l)}.sn .dot{background:var(--c2)}.sn .ci.done .bx{background:var(--c2)}
+.sg .ch{background:var(--c3l)}.sg .dot{background:var(--c3)}.sg .ci.done .bx{background:var(--c3)}
+.sw .ch{background:var(--c4l)}.sw .dot{background:var(--c4)}.sw .ci.done .bx{background:var(--c4)}
+.st .ch{background:var(--c5l)}.st .dot{background:var(--c5)}.st .ci.done .bx{background:var(--c5)}
+.sh .ch{background:var(--c8l)}.sh .dot{background:var(--c8)}.sh .ci.done .bx{background:var(--c8)}
+.sp .ch{background:var(--c7l)}.sp .dot{background:var(--c7)}
+
+/* PROGRESS */
+.pbw{background:#EEEEEE;border-radius:99px;height:6px;margin:0 4px 14px}
+.pbf{height:6px;border-radius:99px;background:linear-gradient(90deg,var(--c1),var(--c5),var(--c3));transition:width .5s cubic-bezier(.34,1.56,.64,1)}
+
+/* HERO */
+.hero{background:#111;border-radius:var(--r);padding:22px 20px 20px;margin-bottom:14px;color:#fff;position:relative;overflow:hidden}
+.hero-accent{position:absolute;width:200px;height:200px;border-radius:50%;top:-60px;left:-60px;background:radial-gradient(circle,rgba(105,78,255,.35),transparent 70%)}
+.hero-accent2{position:absolute;width:180px;height:180px;border-radius:50%;bottom:-70px;right:-40px;background:radial-gradient(circle,rgba(233,30,140,.3),transparent 70%)}
+.hero-quote{font-size:12.5px;opacity:.65;margin-bottom:5px;font-weight:400;line-height:1.6;position:relative}
+.hero-date{font-size:20px;font-weight:900;line-height:1.2;position:relative}
+.hero-date-mil{font-size:11px;opacity:.45;font-weight:400;margin-top:1px}
+.hero-stats{display:flex;gap:8px;margin-top:14px;position:relative}
+.hstat{background:rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;flex:1;text-align:center;border:1px solid rgba(255,255,255,.1)}
+.hstat-n{font-size:22px;font-weight:900;line-height:1}
+.hstat-l{font-size:9px;opacity:.6;margin-top:2px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+
+/* SUMMARY GRID */
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.smc{background:#fff;border-radius:16px;padding:14px;box-shadow:var(--sh);cursor:pointer;transition:transform .15s;border:1.5px solid #F0F0F0}
+.smc:active{transform:scale(.96)}
+.smc-ico{font-size:22px;margin-bottom:6px}
+.smc-t{font-size:10px;color:var(--txm);margin-bottom:3px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.smc-v{font-size:13px;font-weight:800}
+
+/* INPUTS */
+.irow{display:flex;gap:7px;padding:4px 4px 8px}
+.inp{flex:1;border:1.5px solid #EEEEEE;border-radius:12px;padding:9px 12px;font-family:inherit;font-size:13px;outline:none;background:#FAFAFA;direction:rtl;transition:border .2s;color:var(--txt)}
+.inp:focus{border-color:#111;background:#fff}
+select.inp{cursor:pointer}
+.addbtn{color:#fff;border:none;border-radius:12px;padding:9px 15px;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;background:#111}
+
+/* PRIORITY */
+.prio-1{font-size:10px;padding:2px 7px;border-radius:99px;background:#FFE0E0;color:var(--c1);font-weight:700;white-space:nowrap;flex-shrink:0}
+.prio-2{font-size:10px;padding:2px 7px;border-radius:99px;background:#FFF3E0;color:var(--c2);font-weight:700;white-space:nowrap;flex-shrink:0}
+.prio-3{font-size:10px;padding:2px 7px;border-radius:99px;background:#E8F5E9;color:var(--c7);font-weight:700;white-space:nowrap;flex-shrink:0}
+
+/* TIMER */
+.timer-box{background:#111;border-radius:16px;padding:18px 16px 14px;margin:4px 4px 10px}
+.timer-disp{font-size:44px;font-weight:900;text-align:center;color:#fff;letter-spacing:.06em;font-variant-numeric:tabular-nums;line-height:1}
+.timer-label{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.timer-btns{display:flex;gap:8px;margin-top:12px;justify-content:center}
+.tbtn{border:none;border-radius:11px;padding:9px 20px;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer;transition:opacity .15s}
+.tbtn:active{opacity:.7}
+.tbtn-start{background:var(--c3);color:#fff}
+.tbtn-pause{background:var(--c2);color:#fff}
+.tbtn-reset{background:rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.timer-presets{display:flex;gap:6px;margin-top:10px;justify-content:center}
+.tpre{border:1.5px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.6);border-radius:99px;padding:4px 13px;font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;transition:all .15s}
+.tpre.on{background:#fff;color:#111;border-color:#fff}
+
+/* BOOKS */
+.book-item{display:flex;align-items:center;gap:11px;padding:10px 4px;border-bottom:1px solid #F5F5F5}
+.book-item:last-child{border-bottom:none}
+.book-cover{width:36px;height:48px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff}
+.book-info{flex:1;min-width:0}
+.book-title{font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.book-author{font-size:11px;color:var(--txm);margin-top:1px}
+.book-prog{display:flex;align-items:center;gap:7px;margin-top:6px}
+.bpw{flex:1;height:4px;background:#F0F0F0;border-radius:99px;overflow:hidden}
+.bpf{height:4px;border-radius:99px;background:var(--c9);transition:width .3s}
+.book-pct{font-size:10px;font-weight:800;color:var(--c9)}
+.book-del{background:none;border:none;color:#DDD;font-size:14px;cursor:pointer;flex-shrink:0}
+.book-del:hover{color:var(--c1)}
+.reading-now{background:var(--c9l);border-radius:12px;padding:10px 12px;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.rn-label{font-size:10px;font-weight:800;color:var(--c9);letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px}
+.rn-title{font-size:14px;font-weight:800}
+
+/* FILMS */
+.film-item{display:flex;align-items:center;gap:11px;padding:10px 4px;border-bottom:1px solid #F5F5F5;cursor:pointer}
+.film-item:last-child{border-bottom:none}
+.film-item.watched{opacity:.35}
+.film-item.watched .film-title{text-decoration:line-through}
+.film-ico{width:36px;height:36px;border-radius:10px;background:#111;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff}
+.film-info{flex:1}
+.film-title{font-size:13.5px;font-weight:700}
+.film-type{font-size:10px;color:var(--txm);margin-top:1px;font-weight:600}
+.film-del{background:none;border:none;color:#DDD;font-size:14px;cursor:pointer}
+.film-del:hover{color:var(--c1)}
+
+/* STUDY */
+.study-item{display:flex;align-items:center;gap:11px;padding:10px 4px;border-bottom:1px solid #F5F5F5}
+.study-item:last-child{border-bottom:none}
+.study-item.done-s .study-title{text-decoration:line-through;opacity:.4}
+.study-dot{width:10px;height:10px;border-radius:50%;background:var(--ca);flex-shrink:0}
+.study-info{flex:1}
+.study-title{font-size:13.5px;font-weight:700}
+.study-time{font-size:11px;color:var(--txm);margin-top:1px}
+.study-del{background:none;border:none;color:#DDD;font-size:14px;cursor:pointer}
+.study-del:hover{color:var(--c1)}
+.study-timer-btn{font-size:18px;background:none;border:none;cursor:pointer;padding:2px}
+
+/* APPOINTMENTS */
+.appt-item{display:flex;align-items:center;gap:11px;padding:10px 4px;border-bottom:1px solid #F5F5F5}
+.appt-item:last-child{border-bottom:none}
+.appt-dot{width:9px;height:9px;border-radius:50%;background:var(--c6);flex-shrink:0}
+.appt-info{flex:1}
+.appt-name{font-size:13.5px;font-weight:700}
+.appt-time{font-size:11px;color:var(--txm);margin-top:1px}
+.appt-del{background:none;border:none;color:#DDD;font-size:14px;cursor:pointer}
+.appt-del:hover{color:var(--c1)}
+
+/* CALENDAR */
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.cal-nav button{background:#fff;border:1.5px solid #EEE;border-radius:11px;width:36px;height:36px;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.cal-m{font-size:15px;font-weight:900;text-align:center;line-height:1.2}
+.cal-msub{font-size:10px;color:var(--txl);font-weight:400}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cdn{text-align:center;font-size:10px;color:var(--txl);font-weight:800;padding:5px 0;letter-spacing:.02em}
+.cd{aspect-ratio:1;border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:700;cursor:pointer;background:#fff;transition:background .15s;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.cd.today{background:#111;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.cd.om{color:#DDD;background:transparent;box-shadow:none;cursor:default}
+.cd .ddot{width:5px;height:5px;border-radius:50%;margin-top:2px}
+.cd.partial .ddot{background:var(--c2)}
+.cd.full .ddot{background:var(--c7)}
+.cd:not(.today):not(.om):hover{background:#F5F5F5}
+
+/* WEEKLY */
+.wtask{padding:10px 4px;border-bottom:1px solid #F5F5F5}
+.wtask:last-child{border-bottom:none}
+.wtask-top{display:flex;align-items:flex-start;gap:8px}
+.wtask-txt{flex:1;font-size:13.5px;line-height:1.5;font-weight:600}
+.wdel{background:none;border:none;color:#DDD;font-size:14px;cursor:pointer;padding:1px 0}
+.wdel:hover{color:var(--c1)}
+.wdays{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap}
+.wday{font-size:11px;padding:3px 9px;border-radius:99px;font-weight:800;cursor:pointer;border:1.5px solid #EEE;background:#fff;transition:all .15s;color:var(--txl)}
+.wday.on{background:#111;color:#fff;border-color:#111}
+
+.ai-btn{width:100%;padding:12px;background:#111;color:#fff;border:none;border-radius:14px;font-family:inherit;font-size:14px;font-weight:900;cursor:pointer;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:7px;transition:opacity .2s;letter-spacing:.02em}
+.ai-btn:disabled{opacity:.4;cursor:not-allowed}
+.ai-out{margin-top:10px;padding:14px;background:#F7F7F7;border-radius:14px;display:none;border:1.5px solid #EEE}
+.ai-out.show{display:block}
+.ai-task-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #EEE}
+.ai-task-row:last-child{border-bottom:none}
+.ai-day-tag{font-size:10px;font-weight:900;padding:3px 9px;border-radius:99px;background:#111;color:#fff;white-space:nowrap;flex-shrink:0}
+.ai-task-name{font-size:13px;flex:1}
+
+/* PARKING / EOD */
+.ta{width:100%;border:none;outline:none;font-family:inherit;font-size:13px;color:var(--txt);resize:none;background:transparent;line-height:1.9;min-height:70px;padding:4px 4px 0;direction:rtl}
+.eod-area,.wlog-area{width:100%;border:1.5px solid #EEE;border-radius:13px;padding:11px 13px;font-family:inherit;font-size:13px;color:var(--txt);resize:none;background:#FAFAFA;direction:rtl;line-height:1.8;min-height:75px;outline:none;transition:border .2s}
+.eod-area:focus,.wlog-area:focus{border-color:#111;background:#fff}
+.savebtn{background:#111;color:#fff;border:none;border-radius:11px;padding:9px 18px;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer;margin-top:7px;float:left}
+.clearbtn{background:#F5F5F5;color:var(--txm);border:none;border-radius:11px;padding:9px 14px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;margin-top:7px;float:right}
+
+/* QUICK TASK */
+.qt-item{display:flex;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px solid #F5F5F5;cursor:pointer}
+.qt-item:last-child{border-bottom:none}
+.qt-item.done{opacity:.28}
+.qt-item.done .il{text-decoration:line-through}
+.qt-item.done .bx{border-color:transparent!important}
+.qt-del{background:none;border:none;color:#DDD;font-size:13px;cursor:pointer;padding:2px;flex-shrink:0}
+.qt-del:hover{color:var(--c1)}
+.time-inp{width:62px;border:1.5px solid #eee;border-radius:9px;padding:4px 6px;font-family:inherit;font-size:11px;font-weight:600;color:var(--txm);background:#FAFAFA;outline:none;text-align:center;direction:ltr;flex-shrink:0;cursor:text}
+.time-inp:focus{border-color:var(--c3);background:#fff}
+.ypill{font-size:11px;padding:4px 10px;border-radius:99px;border:1.5px solid #eee;background:white;font-family:inherit;font-weight:700;cursor:pointer;color:var(--txm);transition:all .15s}
+.ypill.on{background:var(--c3d,#7B68EE);color:white;border-color:var(--c3d,#7B68EE)}
+.time-inp::placeholder{color:#CCC;font-weight:400}
+
+/* TOAST / CONFETTI */
+.toast{position:fixed;bottom:94px;left:50%;transform:translateX(-50%) translateY(10px);background:#111;color:#fff;padding:10px 22px;border-radius:99px;font-size:13px;font-weight:700;opacity:0;transition:all .3s;pointer-events:none;z-index:400;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.celebrate{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;height:100%;pointer-events:none;z-index:999;overflow:hidden}
+.cp{position:absolute;width:9px;height:9px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{0%{transform:translateY(-20px) rotate(0);opacity:1}100%{transform:translateY(105vh) rotate(720deg);opacity:0}}
+
+/* SECTION TAG */
+.stag{font-size:10px;font-weight:900;padding:3px 9px;border-radius:99px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+
+/* SPINNER */
+.spin{display:inline-block;width:15px;height:15px;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.empty-state{text-align:center;padding:16px 4px;color:var(--txl);font-size:13px;font-weight:500}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+<div class="celebrate" id="celebrate"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <button class="nb on" onclick="goPage('home')"><span class="ic">🏠</span>خونه</button>
+  <button class="nb" onclick="goPage('daily')"><span class="ic">✅</span>امروز</button>
+  <button class="nb" onclick="goPage('weekly')"><span class="ic">📋</span>هفتگی</button>
+  <button class="nb" onclick="goPage('learn')"><span class="ic">📚</span>یادگیری</button>
+  <button class="nb" onclick="goPage('usage')"><span class="ic">🌿</span>مصرف</button>
+  <button class="nb" onclick="goPage('backlog')"><span class="ic">🗂</span>کلی</button>
+</nav>
+
+<!-- ══════ HOME ══════ -->
+<div class="pg on" id="pg-home">
+  <div class="hero">
+    <div class="hero-accent"></div><div class="hero-accent2"></div>
+    <div class="hero-quote" id="h-quote">در حال بارگذاری...</div>
+    <div class="hero-date" id="h-date">—<div class="hero-date-mil" id="h-mil"></div></div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-n" id="hs-done">0</div><div class="hstat-l">تیک</div></div>
+      <div class="hstat"><div class="hstat-n" id="hs-left">0</div><div class="hstat-l">مونده</div></div>
+      <div class="hstat"><div class="hstat-n" id="hs-pct">0%</div><div class="hstat-l">پیشرفت</div></div>
+    </div>
+  </div>
+
+  <div class="sgrid">
+    <div class="smc" onclick="goPage('daily')"><div class="smc-ico">🌅</div><div class="smc-t">روتین صبح</div><div class="smc-v" id="hom-m">—</div></div>
+    <div class="smc" onclick="goPage('daily')"><div class="smc-ico">🌙</div><div class="smc-t">روتین شب</div><div class="smc-v" id="hom-n">—</div></div>
+    <div class="smc" onclick="goPage('daily')"><div class="smc-ico">✅</div><div class="smc-t">کارهای امروز</div><div class="smc-v" id="hom-t">—</div></div>
+    <div class="smc" onclick="goPage('learn')"><div class="smc-ico">📚</div><div class="smc-t">یادگیری</div><div class="smc-v" id="hom-l">—</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:var(--c6l)">
+      <div class="ct"><span class="dot" style="background:var(--c6)"></span>📌 نوبت‌های نزدیک</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb" id="appt-preview"><div class="empty-state">نوبتی ثبت نشده</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:var(--c4l)">
+      <div class="ct"><span class="dot" style="background:var(--c4)"></span>🏃 ورزش امروز</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <span style="font-size:13px;font-weight:600;color:var(--txm);white-space:nowrap">⏱ مدت زمان</span>
+        <div style="display:flex;align-items:center;gap:6px">
+          <input id="workout-mins" type="number" min="0" max="999" placeholder="۰"
+            style="width:64px;border:1.5px solid #eee;border-radius:10px;padding:6px 10px;font-family:inherit;font-size:14px;font-weight:800;color:var(--txt);text-align:center;outline:none;background:#FAFAFA;direction:ltr"
+            oninput="saveWorkout()" onfocus="this.style.borderColor='var(--c4)'" onblur="this.style.borderColor='#eee'">
+          <span style="font-size:13px;color:var(--txm);font-weight:600">دقیقه</span>
+        </div>
+      </div>
+      <textarea class="wlog-area" id="workout-log" placeholder="چی تمرین کردی؟ آزاد بنویس..." oninput="saveWorkout()"></textarea>
+      <div style="clear:both"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:var(--c3l)">
+      <div class="ct"><span class="dot" style="background:var(--c3)"></span>🌙 آخر روز</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <textarea class="eod-area" id="eod-note" placeholder="امروز چطور بود؟ هر چقدر دلت خواست..."></textarea>
+      <button class="savebtn" onclick="saveEOD()">ذخیره</button>
+      <div style="clear:both"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ DAILY ══════ -->
+<div class="pg" id="pg-daily">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+    <div><div style="font-size:22px;font-weight:900">امروز</div><div style="font-size:12px;color:var(--txl);margin-top:1px" id="daily-sub">—</div></div>
+    <div style="font-size:26px;font-weight:900;color:#111" id="daily-pct">0%</div>
+  </div>
+  <div class="pbw"><div class="pbf" id="daily-pb" style="width:0%"></div></div>
+
+  <!-- MORNING -->
+  <div class="card sm">
+    <div class="ch" onclick="toggleCard(this)">
+      <div class="ct"><span class="dot"></span>🌅 روتین صبح</div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="cm" id="cm-m"></span><span class="arr">▲</span></div>
+    </div>
+    <div class="cb" id="list-morning">
+      <div class="ci" onclick="toggleCheck(this,'morning')"><div class="bx">✓</div><div class="il">💊 لووکسین — ۱ عدد <span style="font-size:11px;color:var(--txl)">(ناشتا)</span></div></div>
+      <div class="ci" onclick="toggleCheck(this,'morning')"><div class="bx">✓</div><div class="il">🪥 مسواک</div></div>
+      <div class="ci" onclick="toggleCheck(this,'morning')"><div class="bx">✓</div><div class="il">🫧 گواشا</div></div>
+      <div class="ci" onclick="toggleCheck(this,'morning')"><div class="bx">✓</div><div class="il">🧊 صورت آب یخ / ماساژ یخ</div></div>
+    </div>
+  </div>
+
+  <!-- NOON -->
+  <div class="card sn">
+    <div class="ch" onclick="toggleCard(this)">
+      <div class="ct"><span class="dot"></span>☀️ بعد از ناهار</div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="cm" id="cm-n"></span><span class="arr">▲</span></div>
+    </div>
+    <div class="cb" id="list-noon">
+      <div class="ci" onclick="toggleCheck(this,'noon')"><div class="bx">✓</div><div class="il">💊 ویتامین D</div></div>
+      <div class="ci" onclick="toggleCheck(this,'noon')"><div class="bx">✓</div><div class="il">💊 امگا ۳</div></div>
+      <div class="ci" onclick="toggleCheck(this,'noon')"><div class="bx">✓</div><div class="il">💊 کروم</div></div>
+      <div class="ci" onclick="toggleCheck(this,'noon')"><div class="bx">✓</div><div class="il">💊 لاکتول</div></div>
+    </div>
+  </div>
+
+  <!-- TASKS -->
+  <div class="card st">
+    <div class="ch" onclick="toggleCard(this)">
+      <div class="ct"><span class="dot"></span>✅ کارهای امروز</div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="cm" id="cm-t"></span><span class="arr">▲</span></div>
+    </div>
+    <div class="cb">
+      <div id="task-list"></div>
+      <div class="irow" style="flex-wrap:wrap">
+        <input class="inp" id="task-inp" placeholder="کار جدید..." onkeydown="if(event.key==='Enter')addTask()" style="flex:1;min-width:130px">
+        <select class="inp" id="task-prio" style="flex:0 0 auto;width:auto;cursor:pointer">
+          <option value="2">🟡 مهم</option>
+          <option value="1">🔴 فوری</option>
+          <option value="3">🟢 بعداً</option>
+        </select>
+        <button class="addbtn" onclick="addTask()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME TASKS -->
+  <div class="card sh">
+    <div class="ch" onclick="toggleCard(this)">
+      <div class="ct"><span class="dot"></span>🏠 کارهای خونه</div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="cm" id="cm-h"></span><span class="arr">▲</span></div>
+    </div>
+    <div class="cb">
+      <!-- ثابت‌ها -->
+      <div id="fixed-home-list">
+        <div class="ci" onclick="toggleCheck(this,'fixhome')"><div class="bx">✓</div><div class="il">🧹 جارو / گردگیری</div></div>
+        <div class="ci" onclick="toggleCheck(this,'fixhome')"><div class="bx">✓</div><div class="il">🍽 ظرف‌ها</div></div>
+        <div class="ci" onclick="toggleCheck(this,'fixhome')"><div class="bx">✓</div><div class="il">🛏 تخت</div></div>
+      </div>
+      <div style="height:1px;background:#F5F5F5;margin:4px 0"></div>
+      <div id="htask-list"></div>
+      <div class="irow" style="flex-wrap:wrap">
+        <input class="inp" id="htask-inp" placeholder="کار خونه امروز..." onkeydown="if(event.key==='Enter')addHomeTask()" style="flex:1;min-width:130px">
+        <button class="addbtn" style="background:var(--c8)" onclick="addHomeTask()">+</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:8px;padding-top:8px;border-top:1px solid #F5F5F5">
+        <span style="font-size:12px;font-weight:600;color:var(--txm);white-space:nowrap">⏱ مدت زمان</span>
+        <input id="home-mins" type="number" min="0" max="999" placeholder="۰"
+          style="width:60px;border:1.5px solid #eee;border-radius:10px;padding:5px 8px;font-family:inherit;font-size:14px;font-weight:800;color:var(--txt);text-align:center;outline:none;background:#FAFAFA;direction:ltr"
+          oninput="saveMins('home-mins')" onfocus="this.style.borderColor='var(--c8)'" onblur="this.style.borderColor='#eee'">
+        <span style="font-size:12px;color:var(--txm);font-weight:600">دقیقه</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NIGHT -->
+  <div class="card sg">
+    <div class="ch" onclick="toggleCard(this)">
+      <div class="ct"><span class="dot"></span>🌙 روتین شب</div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="cm" id="cm-ng"></span><span class="arr">▲</span></div>
+    </div>
+    <div class="cb" id="list-night">
+      <div class="ci" onclick="toggleCheck(this,'night')"><div class="bx">✓</div><div class="il">💊 منیزیم</div></div>
+      <div class="ci" onclick="toggleCheck(this,'night')"><div class="bx">✓</div><div class="il">💊 اینوزیتول</div></div>
+      <div class="ci" onclick="toggleCheck(this,'night')"><div class="bx">✓</div><div class="il">💊 کورکومین</div></div>
+      <div class="ci" onclick="toggleCheck(this,'night')"><div class="bx">✓</div><div class="il">💊 لاکتول</div></div>
+      <div class="ci" onclick="toggleCheck(this,'night')"><div class="bx">✓</div><div class="il">🪥 مسواک</div></div>
+      <div class="ci" onclick="toggleCheck(this,'night')"><div class="bx">✓</div><div class="il">✨ اسکین‌کر</div></div>
+      <div class="ci" onclick="toggleCheck(this,'night')"><div class="bx">✓</div><div class="il">🧘 مدیتیشن / تمرین تنفس</div></div>
+    </div>
+  </div>
+
+  <!-- WHENEVER -->
+  <div class="card sw">
+    <div class="ch" onclick="toggleCard(this)">
+      <div class="ct"><span class="dot"></span>🌿 هر وقت حس کردی</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb" id="list-whenever">
+      <div class="ci" onclick="toggleCheck(this,'whenever')"><div class="bx">✓</div><div class="il">درای براش</div></div>
+      <div class="ci" onclick="toggleCheck(this,'whenever')"><div class="bx">✓</div><div class="il">لیمپاتیک درینیج</div></div>
+      <div class="ci" onclick="toggleCheck(this,'whenever')"><div class="bx">✓</div><div class="il">اسپری رزماری</div></div>
+    </div>
+  </div>
+
+  <!-- DIET -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:#E8F5E9">
+      <div class="ct"><span class="dot" style="background:#43A047"></span>🥗 تغذیه امروز</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+
+      <div style="padding:8px 4px 6px">
+        <div style="font-size:10px;font-weight:800;color:var(--txl);margin-bottom:6px;letter-spacing:.04em">💧 آب</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <input class="inp" id="diet-water" type="number" min="0" max="20" placeholder="0" style="width:70px;flex:0" oninput="saveDiet();updateDietTag('water')">
+          <span style="font-size:12px;color:var(--txm);font-weight:600">لیوان</span>
+          <span id="tag-water" style="font-size:11px;font-weight:800;padding:2px 9px;border-radius:99px;transition:all .2s"></span>
+        </div>
+      </div>
+
+      <div style="height:1px;background:#F5F5F5;margin:4px 4px 8px"></div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 4px 8px">
+
+        <div>
+          <div style="font-size:10px;font-weight:800;color:var(--txl);margin-bottom:5px;letter-spacing:.04em">🍞 کربوهیدرات</div>
+          <select class="inp" id="diet-carb" style="width:100%;cursor:pointer" onchange="saveDiet();updateDietTag('carb')">
+            <option value="">انتخاب کن</option>
+            <option value="0">کم</option>
+            <option value="1">کافی</option>
+            <option value="2">زیاد</option>
+            <option value="3">بیش از حد</option>
+          </select>
+          <span id="tag-carb" style="display:inline-block;margin-top:4px;font-size:10px;font-weight:800;padding:2px 9px;border-radius:99px;transition:all .2s"></span>
+        </div>
+
+        <div>
+          <div style="font-size:10px;font-weight:800;color:var(--txl);margin-bottom:5px;letter-spacing:.04em">🍬 قند</div>
+          <select class="inp" id="diet-sugar" style="width:100%;cursor:pointer" onchange="saveDiet();updateDietTag('sugar')">
+            <option value="">انتخاب کن</option>
+            <option value="0">کم</option>
+            <option value="1">کافی</option>
+            <option value="2">زیاد</option>
+            <option value="3">بیش از حد</option>
+          </select>
+          <span id="tag-sugar" style="display:inline-block;margin-top:4px;font-size:10px;font-weight:800;padding:2px 9px;border-radius:99px;transition:all .2s"></span>
+        </div>
+
+        <div>
+          <div style="font-size:10px;font-weight:800;color:var(--txl);margin-bottom:5px;letter-spacing:.04em">🔥 کالری</div>
+          <select class="inp" id="diet-cal" style="width:100%;cursor:pointer" onchange="saveDiet();updateDietTag('cal')">
+            <option value="">انتخاب کن</option>
+            <option value="0">کم</option>
+            <option value="1">کافی</option>
+            <option value="2">زیاد</option>
+            <option value="3">بیش از حد</option>
+          </select>
+          <span id="tag-cal" style="display:inline-block;margin-top:4px;font-size:10px;font-weight:800;padding:2px 9px;border-radius:99px;transition:all .2s"></span>
+        </div>
+
+        <div>
+          <div style="font-size:10px;font-weight:800;color:var(--txl);margin-bottom:5px;letter-spacing:.04em">🥩 پروتئین</div>
+          <select class="inp" id="diet-protein" style="width:100%;cursor:pointer" onchange="saveDiet();updateDietTag('protein')">
+            <option value="">انتخاب کن</option>
+            <option value="0">کم</option>
+            <option value="1">کافی</option>
+            <option value="2">زیاد</option>
+            <option value="3">بیش از حد</option>
+          </select>
+          <span id="tag-protein" style="display:inline-block;margin-top:4px;font-size:10px;font-weight:800;padding:2px 9px;border-radius:99px;transition:all .2s"></span>
+        </div>
+
+        <div>
+          <div style="font-size:10px;font-weight:800;color:var(--txl);margin-bottom:5px;letter-spacing:.04em">🧈 چربی</div>
+          <select class="inp" id="diet-fat" style="width:100%;cursor:pointer" onchange="saveDiet();updateDietTag('fat')">
+            <option value="">انتخاب کن</option>
+            <option value="0">کم</option>
+            <option value="1">کافی</option>
+            <option value="2">زیاد</option>
+            <option value="3">بیش از حد</option>
+          </select>
+          <span id="tag-fat" style="display:inline-block;margin-top:4px;font-size:10px;font-weight:800;padding:2px 9px;border-radius:99px;transition:all .2s"></span>
+        </div>
+
+        <div>
+          <div style="font-size:10px;font-weight:800;color:var(--txl);margin-bottom:5px;letter-spacing:.04em">🥦 فیبر</div>
+          <select class="inp" id="diet-fiber" style="width:100%;cursor:pointer" onchange="saveDiet();updateDietTag('fiber')">
+            <option value="">انتخاب کن</option>
+            <option value="0">کم</option>
+            <option value="1">کافی</option>
+            <option value="2">زیاد</option>
+            <option value="3">بیش از حد</option>
+          </select>
+          <span id="tag-fiber" style="display:inline-block;margin-top:4px;font-size:10px;font-weight:800;padding:2px 9px;border-radius:99px;transition:all .2s"></span>
+        </div>
+
+      </div>
+      <textarea class="ta" id="diet-note" placeholder="یادداشت تغذیه... (چی خوردی، احساست، ...)" rows="2" style="font-size:12px;min-height:50px;border:1.5px solid #EEE;border-radius:10px;padding:8px 10px;background:#FAFAFA;width:100%" oninput="saveDiet()"></textarea>
+    </div>
+  </div>
+
+  <!-- PARKING -->
+  <div class="card sp">
+    <div class="ch" onclick="toggleCard(this)">
+      <div class="ct"><span class="dot"></span>🅿️ پارکینگ ذهن</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <textarea class="ta" id="parking-ta" placeholder="هر چیزی که نباید فراموش بشه — بدون فشار..." rows="4" oninput="savePark()"></textarea>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-size:12px;color:var(--txl);padding:6px 0 4px;font-weight:500">
+    اگه فقط یه چیز تیک زدی، باز هم یه روز خوب بود ✨
+  </div>
+</div>
+
+<!-- ══════ LEARN ══════ -->
+<div class="pg" id="pg-learn">
+  <div style="font-size:22px;font-weight:900;margin-bottom:14px">یادگیری 📚</div>
+
+  <!-- TIMER -->
+  <div class="timer-box">
+    <div class="timer-disp" id="timer-disp">25:00</div>
+    <div class="timer-label" id="timer-label">آماده‌ای؟</div>
+    <div class="timer-presets">
+      <button class="tpre on" onclick="setTimer(25,this)">۲۵ دقیقه</button>
+      <button class="tpre" onclick="setTimer(45,this)">۴۵ دقیقه</button>
+      <button class="tpre" onclick="setTimer(60,this)">۱ ساعت</button>
+    </div>
+    <div class="timer-btns">
+      <button class="tbtn tbtn-start" id="tbtn-main" onclick="toggleTimer()">▶ شروع</button>
+      <button class="tbtn tbtn-reset" onclick="resetTimer()">↺ ریست</button>
+    </div>
+  </div>
+
+  <!-- STUDY -->
+  <div class="card" style="overflow:hidden">
+    <div class="ch" onclick="toggleCard(this)" style="background:var(--cal)">
+      <div class="ct"><span class="dot" style="background:var(--ca)"></span>📖 درس امروز</div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="cm" id="cm-study"></span><span class="arr">▲</span></div>
+    </div>
+    <div class="cb">
+      <div id="study-list"></div>
+      <div class="irow">
+        <input class="inp" id="study-inp" placeholder="موضوع درس..." onkeydown="if(event.key==='Enter')addStudy()">
+        <button class="addbtn" style="background:var(--ca)" onclick="addStudy()">+</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:8px;padding-top:8px;border-top:1px solid #F5F5F5">
+        <span style="font-size:12px;font-weight:600;color:var(--txm);white-space:nowrap">⏱ مدت زمان</span>
+        <input id="study-mins" type="number" min="0" max="999" placeholder="۰"
+          style="width:60px;border:1.5px solid #eee;border-radius:10px;padding:5px 8px;font-family:inherit;font-size:14px;font-weight:800;color:var(--txt);text-align:center;outline:none;background:#FAFAFA;direction:ltr"
+          oninput="saveMins('study-mins')" onfocus="this.style.borderColor='var(--ca)'" onblur="this.style.borderColor='#eee'">
+        <span style="font-size:12px;color:var(--txm);font-weight:600">دقیقه</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LANGUAGE -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:#E0F7FA">
+      <div class="ct"><span class="dot" style="background:#00ACC1"></span>🗣 زبان</div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="cm" id="cm-lang"></span><span class="arr">▲</span></div>
+    </div>
+    <div class="cb">
+      <div id="lang-list"></div>
+      <div class="irow">
+        <input class="inp" id="lang-inp" placeholder="تسک زبان امروز... (مثلاً: ۳۰ لغت، گرامر فصل ۴)" onkeydown="if(event.key==='Enter')addLang()">
+        <button class="addbtn" style="background:#00ACC1" onclick="addLang()">+</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:8px;padding-top:8px;border-top:1px solid #F5F5F5">
+        <span style="font-size:12px;font-weight:600;color:var(--txm);white-space:nowrap">⏱ مدت زمان</span>
+        <input id="lang-mins" type="number" min="0" max="999" placeholder="۰"
+          style="width:60px;border:1.5px solid #eee;border-radius:10px;padding:5px 8px;font-family:inherit;font-size:14px;font-weight:800;color:var(--txt);text-align:center;outline:none;background:#FAFAFA;direction:ltr"
+          oninput="saveMins('lang-mins')" onfocus="this.style.borderColor='#00ACC1'" onblur="this.style.borderColor='#eee'">
+        <span style="font-size:12px;color:var(--txm);font-weight:600">دقیقه</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKS NOW -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:var(--c9l)">
+      <div class="ct"><span class="dot" style="background:var(--c9)"></span>📗 دارم می‌خونم</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <div id="books-reading"></div>
+      <div class="irow" style="flex-wrap:wrap">
+        <input class="inp" id="book-title-inp" placeholder="اسم کتاب..." style="flex:1;min-width:140px">
+        <input class="inp" id="book-author-inp" placeholder="نویسنده" style="flex:1;min-width:100px">
+        <button class="addbtn" style="background:var(--c9)" onclick="addBook('reading')">+</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:8px;padding-top:8px;border-top:1px solid #F5F5F5">
+        <span style="font-size:12px;font-weight:600;color:var(--txm);white-space:nowrap">⏱ مطالعه امروز</span>
+        <input id="book-mins" type="number" min="0" max="999" placeholder="۰"
+          style="width:60px;border:1.5px solid #eee;border-radius:10px;padding:5px 8px;font-family:inherit;font-size:14px;font-weight:800;color:var(--txt);text-align:center;outline:none;background:#FAFAFA;direction:ltr"
+          oninput="saveMins('book-mins')" onfocus="this.style.borderColor='var(--c9)'" onblur="this.style.borderColor='#eee'">
+        <span style="font-size:12px;color:var(--txm);font-weight:600">دقیقه</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILMS - free note -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:#FFF0F8">
+      <div class="ct"><span class="dot" style="background:var(--c5)"></span>🎬 فیلم و سریال</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <textarea class="ta" id="film-note" placeholder="هر چیزی که می‌خوای ببینی، دیدی، نظرت... آزاد بنویس 🎬" rows="5" style="min-height:110px;width:100%;border:none;outline:none;font-family:inherit;font-size:13px;color:var(--txt);resize:none;background:transparent;line-height:1.9;padding:4px;direction:rtl" oninput="saveFilmNote()"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ BACKLOG ══════ -->
+<div class="pg" id="pg-backlog">
+  <div style="font-size:22px;font-weight:900;margin-bottom:4px">تسکای کلی 🗂</div>
+  <div style="font-size:12px;color:var(--txl);margin-bottom:14px;font-weight:500">اینجا همه چیز هست — بدون ددلاین، بدون فشار</div>
+
+  <!-- BACKLOG TASKS -->
+  <div class="card">
+    <div class="ch" style="background:#F0EDFF;cursor:default">
+      <div class="ct"><span class="dot" style="background:var(--c3)"></span>📝 باکلاگ</div>
+      <span class="cm" id="cm-backlog"></span>
+    </div>
+    <div class="cb">
+      <div id="backlog-list"></div>
+      <div class="irow" style="flex-wrap:wrap">
+        <input class="inp" id="bl-inp" placeholder="تسک جدید..." onkeydown="if(event.key==='Enter')addBacklog()" style="flex:1;min-width:140px">
+        <select class="inp" id="bl-cat" style="flex:0 0 auto;width:auto;cursor:pointer">
+          <option value="🔵">🔵 عمومی</option>
+          <option value="💼">💼 کار</option>
+          <option value="🏠">🏠 خونه</option>
+          <option value="💜">💜 شخصی</option>
+          <option value="📚">📚 یادگیری</option>
+          <option value="💡">💡 ایده</option>
+        </select>
+        <button class="addbtn" style="background:var(--c3)" onclick="addBacklog()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CREATIVE -->
+  <div class="card">
+    <div class="ch" style="background:#FFF0F8;cursor:default">
+      <div class="ct"><span class="dot" style="background:var(--c5)"></span>✨ خلاقیت روز</div>
+      <span class="cm" id="cm-creative"></span>
+    </div>
+    <div class="cb">
+      <div id="creative-list"></div>
+      <div class="irow">
+        <input class="inp" id="creative-inp" placeholder="تسک خلاقانه امروز... (نوشتن، کشیدن، ایده‌پردازی...)" onkeydown="if(event.key==='Enter')addCreative()">
+        <button class="addbtn" style="background:var(--c5)" onclick="addCreative()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKS WISHLIST -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:var(--c9l)">
+      <div class="ct"><span class="dot" style="background:var(--c9)"></span>📚 کتاب‌های بعدی</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <div id="books-want-list"></div>
+      <div class="irow" style="flex-wrap:wrap">
+        <input class="inp" id="bw-title" placeholder="اسم کتاب..." style="flex:1;min-width:140px">
+        <input class="inp" id="bw-author" placeholder="نویسنده" style="flex:1;min-width:100px">
+        <button class="addbtn" style="background:var(--c9)" onclick="addBookWant()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILMS WISHLIST -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:#FFF0F8">
+      <div class="ct"><span class="dot" style="background:var(--c5)"></span>🎬 فیلم‌های بعدی</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <div id="films-want-list"></div>
+      <div class="irow">
+        <input class="inp" id="fw-inp" placeholder="اسم فیلم / سریال..." onkeydown="if(event.key==='Enter')addFilmWant()">
+        <button class="addbtn" style="background:var(--c5)" onclick="addFilmWant()">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ WEEKLY ══════ -->
+<div class="pg" id="pg-weekly">
+  <div style="font-size:22px;font-weight:900;margin-bottom:4px">تسک‌های هفته</div>
+  <div style="font-size:12px;color:var(--txl);margin-bottom:14px;font-weight:500" id="week-range">—</div>
+
+  <div class="card">
+    <div class="ch" style="background:var(--c6l);cursor:default">
+      <div class="ct"><span class="dot" style="background:var(--c6)"></span>تسک‌های هفتگی</div>
+    </div>
+    <div class="cb">
+      <div id="weekly-list"></div>
+      <div class="irow">
+        <input class="inp" id="w-inp" placeholder="تسک هفتگی جدید..." onkeydown="if(event.key==='Enter')addWeekTask()">
+        <button class="addbtn" style="background:var(--c6)" onclick="addWeekTask()">+</button>
+      </div>
+      <button class="ai-btn" id="ai-btn" onclick="aiBreakdown()">
+        <span id="ai-btn-txt">✨ برِیک‌داون با AI</span>
+      </button>
+      <div class="ai-out" id="ai-out"></div>
+    </div>
+  </div>
+
+
+  <!-- WEEKLY ACTIVITY TABLE -->
+  <div class="card" id="weekly-activity-card">
+    <div class="ch" onclick="toggleCard(this)" style="background:#F3F0FF">
+      <div class="ct"><span class="dot" style="background:var(--c3)"></span>📊 فعالیت هفته</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb" style="padding:8px 8px 14px">
+      <div id="activity-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch"></div>
+    </div>
+  </div>
+
+
+  <!-- YEARLY OVERVIEW -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:#FFF8EE">
+      <div class="ct"><span class="dot" style="background:var(--c2d,#E6993A)"></span>📆 نمای سالانه</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:11px;color:var(--txl)" id="yearly-sub">—</span>
+        <span class="arr">▲</span>
+      </div>
+    </div>
+    <div class="cb" style="padding:10px 4px 14px">
+      <!-- category filter -->
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+        <button class="ypill on" onclick="setYearCat('home-mins')" data-cat="home-mins">🏠 خونه</button>
+        <button class="ypill" onclick="setYearCat('study-mins')" data-cat="study-mins">📖 درس</button>
+        <button class="ypill" onclick="setYearCat('lang-mins')" data-cat="lang-mins">🗣 زبان</button>
+        <button class="ypill" onclick="setYearCat('book-mins')" data-cat="book-mins">📗 کتاب</button>
+        <button class="ypill" onclick="setYearCat('workout-mins')" data-cat="workout-mins">🏃 ورزش</button>
+      </div>
+      <!-- 52 weeks grid -->
+      <div id="yearly-grid" style="display:grid;grid-template-columns:repeat(13,1fr);gap:4px"></div>
+      <!-- legend -->
+      <div style="display:flex;align-items:center;gap:6px;margin-top:10px;justify-content:flex-end">
+        <span style="font-size:10px;color:var(--txl)">کمتر</span>
+        <div style="width:12px;height:12px;border-radius:3px;background:#F0EEF5"></div>
+        <div style="width:12px;height:12px;border-radius:3px;background:#C5B8F0"></div>
+        <div style="width:12px;height:12px;border-radius:3px;background:#9B85E8"></div>
+        <div style="width:12px;height:12px;border-radius:3px;background:#7B68EE"></div>
+        <div style="width:12px;height:12px;border-radius:3px;background:#4A3AB5"></div>
+        <span style="font-size:10px;color:var(--txl)">بیشتر</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPOINTMENTS -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:var(--c6l)">
+      <div class="ct"><span class="dot" style="background:var(--c6)"></span>📌 نوبت‌ها</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <div id="appt-list"></div>
+      <div class="irow" style="flex-wrap:wrap;gap:7px">
+        <input class="inp" id="appt-name" placeholder="نام نوبت (مثلاً: ماساژ)" style="flex:1;min-width:120px">
+        <input class="inp" id="appt-date" type="date" style="flex:1;min-width:120px">
+        <input class="inp" id="appt-time" type="time" style="flex:0 0 auto">
+        <button class="addbtn" style="background:var(--c6)" onclick="addAppt()">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ CALENDAR ══════ -->
+<div class="pg" id="pg-calendar">
+  <div class="cal-nav">
+    <button onclick="calPrev()">→</button>
+    <div class="cal-m" id="cal-title">—<div class="cal-msub" id="cal-title-mil"></div></div>
+    <button onclick="calNext()">←</button>
+  </div>
+  <div class="card" style="padding:14px">
+    <div class="cal-grid" id="cal-grid"></div>
+  </div>
+  <div style="display:flex;gap:14px;padding:0 4px;margin-bottom:14px">
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--txm);font-weight:600"><div style="width:9px;height:9px;border-radius:50%;background:var(--c2)"></div>در جریان</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--txm);font-weight:600"><div style="width:9px;height:9px;border-radius:50%;background:var(--c7)"></div>کامل ✨</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--txm);font-weight:600"><div style="width:9px;height:9px;border-radius:50%;background:#111;border-radius:50%"></div>امروز</div>
+  </div>
+  <div class="card">
+    <div class="ch" style="cursor:default"><div class="ct"><span class="dot" style="background:var(--c6)"></span>نوبت‌های این ماه</div></div>
+    <div class="cb" id="cal-appt-list"><div class="empty-state">نوبتی ثبت نشده</div></div>
+  </div>
+</div>
+
+<script>
+const TODAY = new Date();
+const DAYS_FA = ['ش','ی','د','س','چ','پ','ج'];
+const DAYS_FULL = ['شنبه','یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه'];
+const QUOTES = [
+  'هر روز یه قدم کوچیک، کافیه 🌱',
+  'لازم نیست کامل باشی — فقط شروع کن ✨',
+  'مغزت عالیه، فقط باید بهش کمک کنی 💜',
+  'امروز فقط امروزه. همین کافیه 🌸',
+  'یه کار کوچیک بهتر از هیچ کاره 🎯',
+  'بعضی روزا کند بودن هم قشنگه 🌿',
+  'به خودت مهربون‌تر باش 🤍',
+  'هر چیزی که تیک بزنی پیروزیه 🏆',
+];
+
+function todayKey(){ const d=TODAY; return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; }
+function load(k,def){ try{const v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch{return def;} }
+function save(k,v){ try{localStorage.setItem(k,JSON.stringify(v));}catch{} }
+
+function checkReset(){
+  const last=load('last-day',''), today=todayKey();
+  if(last!==today){
+    ['morning','noon','night','whenever','fixhome'].forEach(s=>save('checks-'+s,{}));
+    save('daily-tasks',[]); save('home-tasks',[]); save('study-tasks',[]); save('creative-tasks',[]); save('lang-tasks',[]);
+    save('workout-log',''); save('last-day',today);
+  }
+}
+
+// NAV
+function goPage(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('pg-'+id).classList.add('on');
+  const map={home:0,daily:1,learn:2,weekly:3,backlog:4};
+  document.querySelectorAll('.nb')[map[id]].classList.add('on');
+  if(id==='home') updateHome();
+  if(id==='daily'){ updateProgress(); }
+  if(id==='learn'){ renderStudy(); renderLang(); renderBooks(); loadFilmNote(); loadAllMins(); }
+  if(id==='usage'){ renderUsage(); loadUsageNote(); }
+  if(id==='weekly'){ renderWeekly(); renderApptList(); renderActivityTable(); renderYearlyGrid(); }
+  if(id==='backlog'){ renderBacklog(); renderCreative(); renderBooksWant(); renderFilmsWant(); }
+  if(id==='calendar') renderCal();
+}
+function toggleCard(h){ h.closest('.card').classList.toggle('col'); }
+
+// COLORS per section
+function sColor(sec){
+  return {morning:'var(--c1)',noon:'var(--c2)',night:'var(--c3)',whenever:'var(--c4)',tasks:'var(--c5)',home:'var(--c8)',fixhome:'var(--c8)'}[sec]||'var(--c5)';
+}
+
+// CHECKLIST
+function toggleCheck(el, sec){
+  el.classList.toggle('done');
+  const list=el.closest('[id]');
+  const all=[...list.querySelectorAll('.ci')];
+  const idx=all.indexOf(el);
+  const checks=load('checks-'+sec,{});
+  checks[idx]=el.classList.contains('done');
+  save('checks-'+sec,checks);
+  el.querySelector('.bx').style.background=el.classList.contains('done')?sColor(sec):'';
+  checkSectionComplete(sec, list, all);
+  updateProgress();
+  updateHome();
+}
+
+function checkSectionComplete(sec, list, items){
+  const allDone=items.every(i=>i.classList.contains('done'));
+  if(allDone && items.length>0){
+    const msgs={morning:'روتین صبح کامل شد! 🌅',noon:'داروهات رو خوردی! ☀️',night:'روتین شب تموم شد! 🌙',whenever:'عالی! 🌿'};
+    showToast(msgs[sec]||'آفرین! ✨');
+    confetti();
+  }
+}
+
+function restoreChecks(sec, listId){
+  const checks=load('checks-'+sec,{});
+  const items=[...document.querySelectorAll('#'+listId+' .ci')];
+  items.forEach((el,i)=>{
+    if(checks[i]){ el.classList.add('done'); el.querySelector('.bx').style.background=sColor(sec); }
+  });
+}
+
+function secProg(listId){
+  const items=[...document.querySelectorAll('#'+listId+' .ci')];
+  const done=items.filter(i=>i.classList.contains('done')).length;
+  return {done, total:items.length};
+}
+
+function updateProgress(){
+  const secs=[
+    {list:'list-morning',cm:'cm-m'},
+    {list:'list-noon',cm:'cm-n'},
+    {list:'list-night',cm:'cm-ng'},
+    {list:'list-whenever',cm:'cm-wh'},
+  ];
+  let td=0,tt=0;
+  secs.forEach(({list,cm})=>{
+    const {done,total}=secProg(list);
+    td+=done;tt+=total;
+    const el=document.getElementById(cm);
+    if(el) el.textContent=total?`${done}/${total}`:'';
+  });
+  const dt=load('daily-tasks',[]);
+  const dtd=dt.filter(t=>t.done).length;
+  td+=dtd;tt+=dt.length;
+  const ht=load('home-tasks',[]);
+  const htd=ht.filter(t=>t.done).length;
+  td+=htd;tt+=ht.length;
+  const pct=tt?Math.round(td/tt*100):0;
+  const pb=document.getElementById('daily-pb');
+  if(pb) pb.style.width=pct+'%';
+  const pp=document.getElementById('daily-pct');
+  if(pp) pp.textContent=pct+'%';
+  const cmt=document.getElementById('cm-t');
+  if(cmt) cmt.textContent=dt.length?`${dtd}/${dt.length}`:'';
+  const cmh=document.getElementById('cm-h');
+  if(cmh) cmh.textContent=ht.length?`${htd}/${ht.length}`:'';
+  // save day data
+  const dd=load('day-data',{});
+  dd[todayKey()]={done:td,total:tt};
+  save('day-data',dd);
+}
+
+// DAILY TASKS
+function renderTasks(){
+  const tasks=load('daily-tasks',[]);
+  const list=document.getElementById('task-list');
+  if(!list) return;
+  const prioLabel={1:'🔴 فوری',2:'🟡 مهم',3:'🟢 بعداً'};
+  const prioColor={1:'var(--c1)',2:'var(--c2)',3:'var(--c7)'};
+  list.innerHTML=tasks.length?tasks.map((t,i)=>`
+    <div class="qt-item ${t.done?'done':''}" onclick="toggleTask(${i})">
+      <div class="bx" style="${t.done?'background:var(--c5);border-color:transparent':''}">✓</div>
+      <div class="il">${t.text}</div>
+      <span style="font-size:10px;padding:2px 7px;border-radius:99px;background:${t.done?'#F0F0F0':'#F5F5F5'};color:${prioColor[t.prio||2]};font-weight:700;white-space:nowrap">${prioLabel[t.prio||2]}</span>
+      <button class="qt-del" onclick="event.stopPropagation();delTask(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">کاری اضافه نشده</div>';
+}
+function addTask(){
+  const inp=document.getElementById('task-inp'), ps=document.getElementById('task-prio');
+  const text=inp.value.trim(); if(!text) return;
+  const tasks=load('daily-tasks',[]);
+  tasks.push({text,done:false,prio:parseInt(ps.value)||2});
+  save('daily-tasks',tasks);
+  inp.value='';
+  renderTasks(); updateProgress(); updateHome();
+}
+function toggleTask(i){
+  const tasks=load('daily-tasks',[]);
+  tasks[i].done=!tasks[i].done;
+  save('daily-tasks',tasks);
+  renderTasks(); updateProgress(); updateHome();
+  if(tasks[i].done) showToast('آفرین! ✨');
+}
+function delTask(i){
+  const tasks=load('daily-tasks',[]);
+  tasks.splice(i,1); save('daily-tasks',tasks);
+  renderTasks(); updateProgress();
+}
+
+// HOME TASKS
+function renderHomeTasks(){
+  const tasks=load('home-tasks',[]);
+  const list=document.getElementById('htask-list');
+  if(!list) return;
+  list.innerHTML=tasks.length?tasks.map((t,i)=>`
+    <div class="qt-item ${t.done?'done':''}" onclick="toggleHomeTask(${i})">
+      <div class="bx" style="${t.done?'background:var(--c8);border-color:transparent':''}">✓</div>
+      <div class="il">${t.text}</div>
+      <input class="time-inp" type="text" placeholder="0:00" value="${t.time||''}" onclick="event.stopPropagation()" onchange="saveHTTime(${i},this.value)" maxlength="5">
+      <button class="qt-del" onclick="event.stopPropagation();delHomeTask(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">کاری اضافه نشده</div>';
+}
+function saveHTTime(i,val){const t=load('home-tasks',[]);t[i].time=val;save('home-tasks',t);}
+function addHomeTask(){
+  const inp=document.getElementById('htask-inp');
+  const text=inp.value.trim(); if(!text) return;
+  const tasks=load('home-tasks',[]); tasks.push({text,done:false,time:''}); save('home-tasks',tasks);
+  inp.value=''; renderHomeTasks(); updateProgress();
+}
+function toggleHomeTask(i){
+  const tasks=load('home-tasks',[]); tasks[i].done=!tasks[i].done; save('home-tasks',tasks);
+  renderHomeTasks(); updateProgress();
+  if(tasks[i].done) showToast('کار خونه تموم شد! 🏠');
+}
+function delHomeTask(i){
+  const tasks=load('home-tasks',[]); tasks.splice(i,1); save('home-tasks',tasks);
+  renderHomeTasks(); updateProgress();
+}
+
+// STUDY
+function renderStudy(){
+  const tasks=load('study-tasks',[]);
+  const list=document.getElementById('study-list');
+  if(!list) return;
+  list.innerHTML=tasks.length?tasks.map((t,i)=>`
+    <div class="study-item ${t.done?'done-s':''}">
+      <div class="study-dot"></div>
+      <div class="study-info" onclick="toggleStudy(${i})" style="cursor:pointer">
+        <div class="study-title">${t.text}</div>
+      </div>
+      <input class="time-inp" type="text" placeholder="0:00" value="${t.time||''}" onclick="event.stopPropagation()" onchange="saveStudyTime(${i},this.value)" maxlength="5">
+      <button class="study-timer-btn" onclick="startStudyTimer('${t.text.replace(/'/g,"\\'")}')">⏱</button>
+      <button class="study-del" onclick="delStudy(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">موضوع درسی اضافه نشده</div>';
+  const cm=document.getElementById('cm-study');
+  if(cm){ const d=tasks.filter(t=>t.done).length; cm.textContent=tasks.length?`${d}/${tasks.length}`:''; }
+}
+function saveStudyTime(i,val){const t=load('study-tasks',[]);t[i].time=val;save('study-tasks',t);}
+function addStudy(){
+  const inp=document.getElementById('study-inp');
+  const text=inp.value.trim(); if(!text) return;
+  const tasks=load('study-tasks',[]); tasks.push({text,done:false,time:''}); save('study-tasks',tasks);
+  inp.value=''; renderStudy();
+}
+function toggleStudy(i){
+  const tasks=load('study-tasks',[]); tasks[i].done=!tasks[i].done; save('study-tasks',tasks);
+  renderStudy();
+  if(tasks[i].done) showToast('درس تموم شد! 📖 عالی!');
+}
+function delStudy(i){
+  const tasks=load('study-tasks',[]); tasks.splice(i,1); save('study-tasks',tasks); renderStudy();
+}
+function startStudyTimer(name){
+  setTimer(25, document.querySelectorAll('.tpre')[0]);
+  document.getElementById('timer-label').textContent='📖 '+name;
+  showToast('تایمر برای «'+name+'» شروع شد ⏱');
+}
+
+// BOOKS
+const BOOK_COLORS=['#6B4EFF','#E91E8C','#FF9500','#00BFA5','#2979FF','#9C27B0'];
+function renderBooks(){
+  renderBookList('reading','books-reading',true);
+  // books-want removed
+}
+function renderBookList(type, listId, showProg){
+  const books=load('books-'+type,[]);
+  const list=document.getElementById(listId);
+  if(!list) return;
+  list.innerHTML=books.length?books.map((b,i)=>{
+    const col=BOOK_COLORS[i%BOOK_COLORS.length];
+    return `<div class="book-item">
+      <div class="book-cover" style="background:${col}">${b.title[0]||'📗'}</div>
+      <div class="book-info">
+        <div class="book-title">${b.title}</div>
+        <div class="book-author">${b.author||''}</div>
+        ${showProg?`<div class="book-prog">
+          <div class="bpw"><div class="bpf" style="width:${b.pct||0}%"></div></div>
+          <span class="book-pct">${b.pct||0}%</span>
+          <input type="range" min="0" max="100" value="${b.pct||0}" style="width:60px;cursor:pointer" oninput="updateBookPct('${type}',${i},this.value)">
+        </div>`:''}
+      </div>
+      <input class="time-inp" type="text" placeholder="0:00" value="${b.time||''}" onclick="event.stopPropagation()" onchange="saveBookTime('${type}',${i},this.value)" maxlength="5">
+      <button class="book-del" onclick="delBook('${type}',${i})">✕</button>
+    </div>`;
+  }).join(''):
+  `<div class="empty-state">${type==='reading'?'کتابی اضافه نشده':'لیست خالیه'}</div>`;
+}
+function addBook(type){
+  const titleEl=document.getElementById(type==='reading'?'book-title-inp':'bwant-title');
+  const authorEl=document.getElementById(type==='reading'?'book-author-inp':'bwant-author');
+  const title=titleEl.value.trim(); if(!title) return;
+  const books=load('books-'+type,[]); books.push({title,author:authorEl.value.trim(),pct:0}); save('books-'+type,books);
+  titleEl.value=''; authorEl.value=''; renderBooks();
+}
+function updateBookPct(type,i,val){
+  const books=load('books-'+type,[]); books[i].pct=parseInt(val); save('books-'+type,books);
+  renderBooks();
+  if(parseInt(val)===100){ showToast('کتاب تموم شد! 🎉'); confetti(); }
+}
+function saveBookTime(type,i,val){const b=load('books-'+type,[]);b[i].time=val;save('books-'+type,b);}
+function delBook(type,i){
+  const books=load('books-'+type,[]); books.splice(i,1); save('books-'+type,books); renderBooks();
+}
+
+// FILMS
+function renderFilms(){
+  const films=load('films',[]);
+  const list=document.getElementById('film-list');
+  if(!list) return;
+  list.innerHTML=films.length?films.map((f,i)=>`
+    <div class="film-item ${f.watched?'watched':''}" onclick="toggleFilm(${i})">
+      <div class="film-ico">${f.type||'🎬'}</div>
+      <div class="film-info">
+        <div class="film-title">${f.title}</div>
+        <div class="film-type">${f.watched?'✅ دیدم':'⏳ ندیدم'}</div>
+      </div>
+      <input class="time-inp" type="text" placeholder="0:00" value="${f.time||''}" onclick="event.stopPropagation()" onchange="saveFilmTime(${i},this.value)" maxlength="5">
+      <button class="film-del" onclick="event.stopPropagation();delFilm(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">فیلمی اضافه نشده</div>';
+  const cm=document.getElementById('cm-films');
+  if(cm){ const w=films.filter(f=>f.watched).length; cm.textContent=films.length?`${w}/${films.length}`:''; }
+}
+function addFilm(){
+  const inp=document.getElementById('film-inp'), tp=document.getElementById('film-type');
+  const title=inp.value.trim(); if(!title) return;
+  const films=load('films',[]); films.push({title,type:tp.value,watched:false}); save('films',films);
+  inp.value=''; renderFilms();
+}
+function toggleFilm(i){
+  const films=load('films',[]); films[i].watched=!films[i].watched; save('films',films);
+  renderFilms();
+  if(films[i].watched){ showToast('دیدی! 🎬 نظرت چی بود؟'); }
+}
+function saveFilmTime(i,val){const f=load('films',[]);f[i].time=val;save('films',f);}
+function delFilm(i){
+  const films=load('films',[]); films.splice(i,1); save('films',films); renderFilms();
+}
+
+// TIMER
+let timerSecs=25*60, timerRunning=false, timerInterval=null, timerTotal=25*60;
+function setTimer(mins, btn){
+  resetTimer();
+  timerSecs=mins*60; timerTotal=mins*60;
+  document.querySelectorAll('.tpre').forEach(b=>b.classList.remove('on'));
+  if(btn) btn.classList.add('on');
+  updateTimerDisplay();
+}
+function toggleTimer(){
+  if(timerRunning){ pauseTimer(); } else { startTimerRun(); }
+}
+function startTimerRun(){
+  timerRunning=true;
+  document.getElementById('tbtn-main').textContent='⏸ مکث';
+  document.getElementById('tbtn-main').className='tbtn tbtn-pause';
+  document.getElementById('timer-label').textContent='در حال تمرکز...';
+  timerInterval=setInterval(()=>{
+    timerSecs--;
+    updateTimerDisplay();
+    if(timerSecs<=0){
+      clearInterval(timerInterval); timerRunning=false;
+      document.getElementById('tbtn-main').textContent='▶ شروع';
+      document.getElementById('tbtn-main').className='tbtn tbtn-start';
+      document.getElementById('timer-label').textContent='تایمر تموم شد! 🎉';
+      showToast('زمان تموم شد! 🎉'); confetti();
+    }
+  },1000);
+}
+function pauseTimer(){
+  clearInterval(timerInterval); timerRunning=false;
+  document.getElementById('tbtn-main').textContent='▶ ادامه';
+  document.getElementById('tbtn-main').className='tbtn tbtn-start';
+  document.getElementById('timer-label').textContent='مکث';
+}
+function resetTimer(){
+  clearInterval(timerInterval); timerRunning=false; timerSecs=timerTotal;
+  document.getElementById('tbtn-main').textContent='▶ شروع';
+  document.getElementById('tbtn-main').className='tbtn tbtn-start';
+  document.getElementById('timer-label').textContent='آماده‌ای؟';
+  updateTimerDisplay();
+}
+function updateTimerDisplay(){
+  const m=Math.floor(timerSecs/60), s=timerSecs%60;
+  document.getElementById('timer-disp').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
+// PARKING / EOD / WORKOUT
+function loadPark(){ const ta=document.getElementById('parking-ta'); if(ta) ta.value=load('parking',''); }
+function savePark(){ save('parking',document.getElementById('parking-ta').value); }
+function loadEOD(){ const el=document.getElementById('eod-note'); if(el) el.value=load('eod-'+todayKey(),''); }
+function saveEOD(){ save('eod-'+todayKey(),document.getElementById('eod-note').value); showToast('ذخیره شد ✓'); }
+function loadWorkout(){
+  const el=document.getElementById('workout-log'); if(el) el.value=load('workout-'+todayKey(),'');
+  const mins=document.getElementById('workout-mins'); if(mins) mins.value=load('workout-mins-'+todayKey(),'')||'';
+}
+function saveWorkout(){
+  save('workout-'+todayKey(), document.getElementById('workout-log')?.value||'');
+  save('workout-mins-'+todayKey(), document.getElementById('workout-mins')?.value||'');
+}
+
+// HOME
+function updateHome(){
+  const h=TODAY.getHours();
+  const g=h<12?'صبح بخیر ☀️':h<17?'بعد از ظهر بخیر 🌤':h<21?'عصر بخیر 🌅':'شب بخیر 🌙';
+  const qEl=document.getElementById('h-quote');
+  if(qEl) qEl.textContent=QUOTES[TODAY.getDay()%QUOTES.length];
+  const dateEl=document.getElementById('h-date');
+  if(dateEl){
+    const fa=new Intl.DateTimeFormat('fa-IR',{weekday:'long',day:'numeric',month:'long'}).format(TODAY);
+    const mil=new Intl.DateTimeFormat('en-US',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(TODAY);
+    dateEl.childNodes[0].textContent=fa;
+    const milEl=document.getElementById('h-mil');
+    if(milEl) milEl.textContent=mil;
+  }
+  const subEl=document.getElementById('daily-sub');
+  if(subEl) subEl.textContent=new Intl.DateTimeFormat('fa-IR',{weekday:'long',day:'numeric',month:'long'}).format(TODAY);
+  const dd=load('day-data',{}); const d=dd[todayKey()]||{done:0,total:0};
+  const el=(id)=>document.getElementById(id);
+  if(el('hs-done')) el('hs-done').textContent=d.done;
+  if(el('hs-left')) el('hs-left').textContent=Math.max(0,d.total-d.done);
+  if(el('hs-pct')) el('hs-pct').textContent=d.total?Math.round(d.done/d.total*100)+'%':'0%';
+  const mItems=[...document.querySelectorAll('#list-morning .ci')].length||4;
+  const nItems=[...document.querySelectorAll('#list-night .ci')].length||6;
+  const mc=load('checks-morning',{}); const nc=load('checks-night',{});
+  const mDone=Object.values(mc).filter(Boolean).length;
+  const nDone=Object.values(nc).filter(Boolean).length;
+  if(el('hom-m')) el('hom-m').textContent=`${mDone}/${mItems} ✓`;
+  if(el('hom-n')) el('hom-n').textContent=`${nDone}/${nItems} ✓`;
+  const dt=load('daily-tasks',[]); const dtd=dt.filter(t=>t.done).length;
+  if(el('hom-t')) el('hom-t').textContent=dt.length?`${dtd}/${dt.length} ✓`:'خالیه';
+  const st=load('study-tasks',[]); const sd=st.filter(t=>t.done).length;
+  const books=load('books-reading',[]); const films=load('films',[]);
+  const fw=films.filter(f=>f.watched).length;
+  if(el('hom-l')){
+    const parts=[];
+    if(st.length) parts.push(`${sd}/${st.length} درس`);
+    if(books.length) parts.push(`${books.length} کتاب`);
+    if(films.length) parts.push(`${fw}/${films.length} فیلم`);
+    el('hom-l').textContent=parts.length?parts.join(' · '):'خالیه';
+  }
+  // week range
+  const ws=new Date(TODAY); ws.setDate(TODAY.getDate()-TODAY.getDay());
+  const we=new Date(ws); we.setDate(ws.getDate()+6);
+  const fmt=(d)=>new Intl.DateTimeFormat('fa-IR',{day:'numeric',month:'short'}).format(d);
+  const wr=document.getElementById('week-range');
+  if(wr) wr.textContent=`${fmt(ws)} تا ${fmt(we)}`;
+  renderApptPreview();
+}
+
+// APPOINTMENTS
+function renderApptList(){
+  const appts=load('appointments',[]);
+  const list=document.getElementById('appt-list');
+  if(!list) return;
+  list.innerHTML=appts.length?appts.map((a,i)=>`
+    <div class="appt-item">
+      <div class="appt-dot"></div>
+      <div class="appt-info">
+        <div class="appt-name">${a.name}</div>
+        <div class="appt-time">${a.date?new Intl.DateTimeFormat('fa-IR',{weekday:'long',day:'numeric',month:'long'}).format(new Date(a.date)):''} ${a.time||''}</div>
+      </div>
+      <button class="appt-del" onclick="delAppt(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">نوبتی ثبت نشده</div>';
+}
+function renderApptPreview(){
+  const appts=load('appointments',[]); const now=new Date();
+  const up=appts.filter(a=>a.date&&new Date(a.date)>=now).slice(0,3);
+  const list=document.getElementById('appt-preview');
+  if(!list) return;
+  list.innerHTML=up.length?up.map(a=>`
+    <div class="appt-item">
+      <div class="appt-dot"></div>
+      <div class="appt-info">
+        <div class="appt-name">${a.name}</div>
+        <div class="appt-time">${a.date?new Intl.DateTimeFormat('fa-IR',{weekday:'long',day:'numeric',month:'long'}).format(new Date(a.date)):''} ${a.time||''}</div>
+      </div>
+    </div>`).join(''):
+    '<div class="empty-state">نوبت نزدیکی نداری</div>';
+}
+function addAppt(){
+  const name=document.getElementById('appt-name').value.trim(); if(!name) return;
+  const date=document.getElementById('appt-date').value;
+  const time=document.getElementById('appt-time').value;
+  const appts=load('appointments',[]); appts.push({name,date,time});
+  appts.sort((a,b)=>new Date(a.date)-new Date(b.date)); save('appointments',appts);
+  document.getElementById('appt-name').value='';
+  document.getElementById('appt-date').value='';
+  document.getElementById('appt-time').value='';
+  renderApptList(); renderCalAppts(); showToast('نوبت ثبت شد 📌');
+}
+function delAppt(i){
+  const appts=load('appointments',[]); appts.splice(i,1); save('appointments',appts);
+  renderApptList(); renderCalAppts(); renderApptPreview();
+}
+
+// WEEKLY TASKS
+function renderWeekly(){
+  const tasks=load('weekly-tasks',[]);
+  const list=document.getElementById('weekly-list');
+  if(!list) return;
+  list.innerHTML=tasks.length?tasks.map((t,i)=>`
+    <div class="wtask">
+      <div class="wtask-top">
+        <div class="wtask-txt">${t.text}</div>
+        <button class="wdel" onclick="delWeekTask(${i})">✕</button>
+      </div>
+      <div class="wdays">
+        ${DAYS_FULL.map((d,di)=>`<button class="wday ${(t.days||[]).includes(di)?'on':''}" onclick="toggleWDay(${i},${di})">${DAYS_FA[di]}</button>`).join('')}
+      </div>
+    </div>`).join(''):
+    '<div class="empty-state">تسکی اضافه نشده</div>';
+}
+function addWeekTask(){
+  const inp=document.getElementById('w-inp');
+  const text=inp.value.trim(); if(!text) return;
+  const tasks=load('weekly-tasks',[]); tasks.push({text,days:[]}); save('weekly-tasks',tasks);
+  inp.value=''; renderWeekly();
+}
+function delWeekTask(i){
+  const tasks=load('weekly-tasks',[]); tasks.splice(i,1); save('weekly-tasks',tasks); renderWeekly();
+}
+function toggleWDay(ti,di){
+  const tasks=load('weekly-tasks',[]); if(!tasks[ti].days) tasks[ti].days=[];
+  const idx=tasks[ti].days.indexOf(di);
+  if(idx>=0) tasks[ti].days.splice(idx,1); else tasks[ti].days.push(di);
+  save('weekly-tasks',tasks); renderWeekly();
+}
+
+// AI BREAKDOWN
+async function aiBreakdown(){
+  const tasks=load('weekly-tasks',[]); if(!tasks.length){showToast('اول تسک اضافه کن!');return;}
+  const btn=document.getElementById('ai-btn'), txt=document.getElementById('ai-btn-txt'), out=document.getElementById('ai-out');
+  btn.disabled=true; txt.innerHTML='<span class="spin"></span> در حال پردازش...'; out.classList.remove('show');
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',max_tokens:1000,
+        messages:[{role:'user',content:`تسک‌های هفته من:\n${tasks.map((t,i)=>`${i+1}. ${t.text}`).join('\n')}\n\nروزهای هفته: ${DAYS_FULL.join('، ')}\n\nاین تسک‌ها رو به روزهای هفته تقسیم کن. فقط با این فرمت (هر خط یه تسک):\nروز: اسم تسک\n\nبدون توضیح اضافه.`}]
+      })
+    });
+    const data=await res.json();
+    const text=data.content?.map(c=>c.text||'').join('').trim();
+    if(!text) throw new Error();
+    const lines=text.split('\n').filter(l=>l.trim()&&l.includes(':'));
+    out.innerHTML=lines.map(line=>{
+      const [day,...rest]=line.split(':');
+      return `<div class="ai-task-row"><span class="ai-day-tag">${day.trim()}</span><span class="ai-task-name">${rest.join(':').trim()}</span></div>`;
+    }).join('');
+    out.classList.add('show');
+  }catch(e){
+    out.innerHTML='<span style="color:var(--c1)">مشکلی پیش اومد. دوباره امتحان کن.</span>';
+    out.classList.add('show');
+  }
+  btn.disabled=false; txt.textContent='✨ برِیک‌داون با AI';
+}
+
+// CALENDAR
+let calYear=TODAY.getFullYear(), calMonth=TODAY.getMonth();
+function calPrev(){ calMonth--; if(calMonth<0){calMonth=11;calYear--;} renderCal(); }
+function calNext(){ calMonth++; if(calMonth>11){calMonth=0;calYear++;} renderCal(); }
+function renderCal(){
+  const titleEl=document.getElementById('cal-title'), grid=document.getElementById('cal-grid');
+  if(!titleEl||!grid) return;
+  const fa=new Intl.DateTimeFormat('fa-IR',{month:'long',year:'numeric'}).format(new Date(calYear,calMonth,1));
+  const mil=new Intl.DateTimeFormat('en-US',{month:'long',year:'numeric'}).format(new Date(calYear,calMonth,1));
+  titleEl.childNodes[0].textContent=fa;
+  const milEl=document.getElementById('cal-title-mil'); if(milEl) milEl.textContent=mil;
+  const dayData=load('day-data',{});
+  grid.innerHTML='';
+  DAYS_FA.forEach(d=>{const el=document.createElement('div');el.className='cdn';el.textContent=d;grid.appendChild(el);});
+  const firstDay=new Date(calYear,calMonth,1).getDay();
+  const daysInMonth=new Date(calYear,calMonth+1,0).getDate();
+  const daysInPrev=new Date(calYear,calMonth,0).getDate();
+  for(let i=firstDay-1;i>=0;i--){const el=document.createElement('div');el.className='cd om';el.innerHTML=`<div>${daysInPrev-i}</div>`;grid.appendChild(el);}
+  for(let d=1;d<=daysInMonth;d++){
+    const el=document.createElement('div'); el.className='cd';
+    const key=`${calYear}-${calMonth+1}-${d}`;
+    const isToday=d===TODAY.getDate()&&calMonth===TODAY.getMonth()&&calYear===TODAY.getFullYear();
+    if(isToday) el.classList.add('today');
+    const label=new Intl.DateTimeFormat('fa-IR-u-nu-latn').format(new Date(calYear,calMonth,d));
+    el.innerHTML=`<div>${label}</div><div class="ddot"></div>`;
+    if(dayData[key]){const{done,total}=dayData[key];if(done===total&&total>0)el.classList.add('full');else if(done>0)el.classList.add('partial');}
+    grid.appendChild(el);
+  }
+  renderCalAppts();
+}
+function renderCalAppts(){
+  const appts=load('appointments',[]);
+  const ma=appts.filter(a=>{if(!a.date)return false;const d=new Date(a.date);return d.getMonth()===calMonth&&d.getFullYear()===calYear;});
+  const list=document.getElementById('cal-appt-list');
+  if(!list) return;
+  list.innerHTML=ma.length?ma.map(a=>`
+    <div class="appt-item">
+      <div class="appt-dot"></div>
+      <div class="appt-info">
+        <div class="appt-name">${a.name}</div>
+        <div class="appt-time">${a.date?new Intl.DateTimeFormat('fa-IR',{weekday:'long',day:'numeric',month:'long'}).format(new Date(a.date)):''} ${a.time||''}</div>
+      </div>
+    </div>`).join(''):
+    '<div class="empty-state">نوبتی این ماه ثبت نشده</div>';
+}
+
+// TOAST & CONFETTI
+function showToast(msg){
+  const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
+}
+function confetti(){
+  const c=document.getElementById('celebrate'); c.innerHTML='';
+  const colors=['#FF3B3B','#FF9500','#6B4EFF','#00C9A7','#E91E8C','#2979FF','#2ECC71'];
+  for(let i=0;i<28;i++){
+    const el=document.createElement('div'); el.className='cp';
+    el.style.cssText=`left:${Math.random()*100}%;background:${colors[i%colors.length]};width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;animation-duration:${1.2+Math.random()*1.5}s;animation-delay:${Math.random()*.4}s;border-radius:${Math.random()>.5?'50%':'3px'}`;
+    c.appendChild(el);
+  }
+  setTimeout(()=>c.innerHTML='',3500);
+}
+
+
+// FILM NOTE
+function saveFilmNote(){ save('film-note', document.getElementById('film-note').value); }
+function loadFilmNote(){ const el=document.getElementById('film-note'); if(el) el.value=load('film-note',''); }
+
+
+// LANGUAGE
+function renderLang(){
+  const tasks=load('lang-tasks',[]);
+  const list=document.getElementById('lang-list');
+  if(!list) return;
+  list.innerHTML=tasks.length?tasks.map((t,i)=>`
+    <div class="qt-item ${t.done?'done':''}" onclick="toggleLang(${i})">
+      <div class="bx" style="${t.done?'background:#00ACC1;border-color:transparent':''}">✓</div>
+      <div class="il">${t.text}</div>
+      <input class="time-inp" type="text" placeholder="0:00" value="${t.time||''}" onclick="event.stopPropagation()" onchange="saveLangTime(${i},this.value)" maxlength="5">
+      <button class="qt-del" onclick="event.stopPropagation();delLang(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">تسک زبانی اضافه نشده</div>';
+  const cm=document.getElementById('cm-lang');
+  if(cm){ const d=tasks.filter(t=>t.done).length; cm.textContent=tasks.length?`${d}/${tasks.length}`:''; }
+}
+function saveLangTime(i,val){const t=load('lang-tasks',[]);t[i].time=val;save('lang-tasks',t);}
+function addLang(){
+  const inp=document.getElementById('lang-inp');
+  const text=inp.value.trim(); if(!text) return;
+  const tasks=load('lang-tasks',[]); tasks.push({text,done:false,time:''}); save('lang-tasks',tasks);
+  inp.value=''; renderLang();
+}
+function toggleLang(i){
+  const tasks=load('lang-tasks',[]); tasks[i].done=!tasks[i].done; save('lang-tasks',tasks);
+  renderLang();
+  if(tasks[i].done) showToast('آفرین! 🗣');
+}
+function delLang(i){
+  const tasks=load('lang-tasks',[]); tasks.splice(i,1); save('lang-tasks',tasks); renderLang();
+}
+
+// DIET
+const DIET_LEVELS=[
+  {label:'کم',bg:'#E8F5E9',color:'#2ECC71'},
+  {label:'کافی',bg:'#E3F2FD',color:'#2979FF'},
+  {label:'زیاد',bg:'#FFF8EE',color:'#FF9500'},
+  {label:'بیش از حد',bg:'#FFE0E0',color:'#FF3B3B'},
+];
+function updateDietTag(field){
+  if(field==='water'){
+    const n=parseInt(document.getElementById('diet-water')?.value||'0');
+    const tag=document.getElementById('tag-water');
+    if(!tag) return;
+    if(!n){tag.textContent='';tag.style.background='';return;}
+    if(n<4){tag.textContent='😕 کمه';tag.style.background='#FFE0E0';tag.style.color='#FF3B3B';}
+    else if(n<7){tag.textContent='😊 خوبه';tag.style.background='#FFF8EE';tag.style.color='#FF9500';}
+    else if(n<9){tag.textContent='💙 کافی';tag.style.background='#E3F2FD';tag.style.color='#2979FF';}
+    else{tag.textContent='🌊 عالی';tag.style.background='#E8F5E9';tag.style.color='#2ECC71';}
+    return;
+  }
+  const ids={carb:'tag-carb',sugar:'tag-sugar',cal:'tag-cal',protein:'tag-protein',fat:'tag-fat',fiber:'tag-fiber'};
+  const val=document.getElementById('diet-'+field)?.value;
+  const tag=document.getElementById(ids[field]);
+  if(!tag) return;
+  if(val===''){tag.textContent='';tag.style.background='';return;}
+  const lv=DIET_LEVELS[parseInt(val)];
+  if(lv){tag.textContent=lv.label;tag.style.background=lv.bg;tag.style.color=lv.color;}
+}
+function saveDiet(){
+  const g=(id)=>document.getElementById(id)?.value||'';
+  save('diet-'+todayKey(),{
+    water:g('diet-water'),carb:g('diet-carb'),sugar:g('diet-sugar'),
+    cal:g('diet-cal'),protein:g('diet-protein'),fat:g('diet-fat'),
+    fiber:g('diet-fiber'),note:g('diet-note')
+  });
+}
+function loadDiet(){
+  const d=load('diet-'+todayKey(),{});
+  const set=(id,v)=>{const el=document.getElementById(id);if(el&&(v||v==='0')) el.value=v;};
+  set('diet-water',d.water); set('diet-carb',d.carb); set('diet-sugar',d.sugar);
+  set('diet-cal',d.cal); set('diet-protein',d.protein); set('diet-fat',d.fat);
+  set('diet-fiber',d.fiber); set('diet-note',d.note);
+  ['water','carb','sugar','cal','protein','fat','fiber'].forEach(f=>updateDietTag(f));
+}
+
+// BACKLOG
+function renderBacklog(){
+  const tasks=load('backlog',[]);
+  const list=document.getElementById('backlog-list');
+  if(!list) return;
+  list.innerHTML=tasks.length?tasks.map((t,i)=>`
+    <div class="qt-item ${t.done?'done':''}" onclick="toggleBacklog(${i})">
+      <div class="bx" style="${t.done?'background:var(--c3);border-color:transparent':''}">✓</div>
+      <span style="font-size:16px;flex-shrink:0">${t.cat||'🔵'}</span>
+      <div class="il">${t.text}</div>
+      <button class="qt-del" onclick="event.stopPropagation();delBacklog(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">باکلاگ خالیه — هر تسکی که الان نمیخوای انجام بدی اینجا بذار</div>';
+  const cm=document.getElementById('cm-backlog');
+  if(cm){ const d=tasks.filter(t=>t.done).length; cm.textContent=tasks.length?`${d}/${tasks.length}`:'';}
+}
+function addBacklog(){
+  const inp=document.getElementById('bl-inp'), cat=document.getElementById('bl-cat');
+  const text=inp.value.trim(); if(!text) return;
+  const tasks=load('backlog',[]); tasks.push({text,done:false,cat:cat.value}); save('backlog',tasks);
+  inp.value=''; renderBacklog();
+}
+function toggleBacklog(i){
+  const tasks=load('backlog',[]); tasks[i].done=!tasks[i].done; save('backlog',tasks);
+  renderBacklog();
+  if(tasks[i].done){ showToast('تسک کامل شد! 🎉'); confetti(); }
+}
+function delBacklog(i){
+  const tasks=load('backlog',[]); tasks.splice(i,1); save('backlog',tasks); renderBacklog();
+}
+
+// CREATIVE TASKS (resets daily)
+function renderCreative(){
+  const tasks=load('creative-tasks',[]);
+  const list=document.getElementById('creative-list');
+  if(!list) return;
+  list.innerHTML=tasks.length?tasks.map((t,i)=>`
+    <div class="qt-item ${t.done?'done':''}" onclick="toggleCreative(${i})">
+      <div class="bx" style="${t.done?'background:var(--c5);border-color:transparent':''}">✓</div>
+      <div class="il">${t.text}</div>
+      <button class="qt-del" onclick="event.stopPropagation();delCreative(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">تسک خلاقانه‌ای نداری — هر چیزی که ذوق داری اینجا بذار ✨</div>';
+  const cm=document.getElementById('cm-creative');
+  if(cm){ const d=tasks.filter(t=>t.done).length; cm.textContent=tasks.length?`${d}/${tasks.length}`:''; }
+}
+function addCreative(){
+  const inp=document.getElementById('creative-inp');
+  const text=inp.value.trim(); if(!text) return;
+  const tasks=load('creative-tasks',[]); tasks.push({text,done:false}); save('creative-tasks',tasks);
+  inp.value=''; renderCreative();
+}
+function toggleCreative(i){
+  const tasks=load('creative-tasks',[]); tasks[i].done=!tasks[i].done; save('creative-tasks',tasks);
+  renderCreative();
+  if(tasks[i].done){ showToast('آفرین! خلاقیت داری ✨'); confetti(); }
+}
+function delCreative(i){
+  const tasks=load('creative-tasks',[]); tasks.splice(i,1); save('creative-tasks',tasks); renderCreative();
+}
+
+// BOOKS WANT
+function renderBooksWant(){
+  const books=load('books-want',[]);
+  const list=document.getElementById('books-want-list');
+  if(!list) return;
+  list.innerHTML=books.length?books.map((b,i)=>`
+    <div class="qt-item">
+      <div style="font-size:20px">📖</div>
+      <div class="il"><div style="font-weight:700;font-size:13.5px">${b.title}</div>${b.author?`<div style="font-size:11px;color:var(--txm)">${b.author}</div>`:''}</div>
+      <button class="qt-del" onclick="delBookWant(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">لیست خالیه</div>';
+}
+function addBookWant(){
+  const t=document.getElementById('bw-title').value.trim(); if(!t) return;
+  const a=document.getElementById('bw-author').value.trim();
+  const books=load('books-want',[]); books.push({title:t,author:a}); save('books-want',books);
+  document.getElementById('bw-title').value=''; document.getElementById('bw-author').value='';
+  renderBooksWant();
+}
+function delBookWant(i){
+  const books=load('books-want',[]); books.splice(i,1); save('books-want',books); renderBooksWant();
+}
+
+// FILMS WANT
+function renderFilmsWant(){
+  const films=load('films-want',[]);
+  const list=document.getElementById('films-want-list');
+  if(!list) return;
+  list.innerHTML=films.length?films.map((f,i)=>`
+    <div class="qt-item">
+      <div style="font-size:20px">🎬</div>
+      <div class="il" style="font-weight:700;font-size:13.5px">${f}</div>
+      <button class="qt-del" onclick="delFilmWant(${i})">✕</button>
+    </div>`).join(''):
+    '<div class="empty-state">لیست خالیه</div>';
+}
+function addFilmWant(){
+  const inp=document.getElementById('fw-inp'); const text=inp.value.trim(); if(!text) return;
+  const films=load('films-want',[]); films.push(text); save('films-want',films);
+  inp.value=''; renderFilmsWant();
+}
+function delFilmWant(i){
+  const films=load('films-want',[]); films.splice(i,1); save('films-want',films); renderFilmsWant();
+}
+
+
+
+
+// ══ YEARLY OVERVIEW ══
+let yearCat = 'home-mins';
+
+function setYearCat(cat){
+  yearCat = cat;
+  document.querySelectorAll('.ypill').forEach(p=>{
+    p.classList.toggle('on', p.dataset.cat===cat);
+  });
+  renderYearlyGrid();
+}
+
+function renderYearlyGrid(){
+  const grid = document.getElementById('yearly-grid');
+  const sub  = document.getElementById('yearly-sub');
+  if(!grid) return;
+
+  const today = new Date();
+  const year  = today.getFullYear();
+
+  // collect 52 weeks — each week = Mon..Sun block, we do sat-based
+  // simpler: just go back 51 weeks from current week start, then forward
+  // find start of week 1 of year (first Saturday on or before Jan 1)
+  const jan1 = new Date(year, 0, 1);
+  // go to nearest Saturday on or before Jan 1
+  const jan1dow = jan1.getDay(); // 0=sun,6=sat
+  const diffToSat = (jan1dow === 6) ? 0 : -(jan1dow + 1);
+  const weekStart = new Date(jan1);
+  weekStart.setDate(jan1.getDate() + diffToSat);
+
+  const weeks = [];
+  for(let w=0; w<52; w++){
+    const ws = new Date(weekStart);
+    ws.setDate(weekStart.getDate() + w*7);
+    let total = 0;
+    let hasAny = false;
+    for(let d=0; d<7; d++){
+      const day = new Date(ws);
+      day.setDate(ws.getDate() + d);
+      if(day.getFullYear() !== year) continue;
+      const key = 'mins-' + day.getFullYear()+'-'+(day.getMonth()+1)+'-'+day.getDate()+'-'+yearCat;
+      const val = parseInt(load(key,'')||0)||0;
+      if(val) { total += val; hasAny = true; }
+    }
+    weeks.push({ws, total, hasAny});
+  }
+
+  const maxVal = Math.max(...weeks.map(w=>w.total), 1);
+  const catLabels = {'home-mins':'🏠 خونه','study-mins':'📖 درس','lang-mins':'🗣 زبان','book-mins':'📗 کتاب','workout-mins':'🏃 ورزش'};
+
+  // color intensity 0-4
+  function getColor(total){
+    if(!total) return '#F0EEF5';
+    const pct = total/maxVal;
+    if(pct < 0.25) return '#C5B8F0';
+    if(pct < 0.50) return '#9B85E8';
+    if(pct < 0.75) return '#7B68EE';
+    return '#4A3AB5';
+  }
+
+  // find current week index
+  const todayTime = today.getTime();
+
+  grid.innerHTML = weeks.map((w,i)=>{
+    const we = new Date(w.ws); we.setDate(w.ws.getDate()+6);
+    const isCurrent = today >= w.ws && today <= we;
+    const label = new Intl.DateTimeFormat('fa-IR',{month:'short',day:'numeric'}).format(w.ws);
+    const totalDisp = w.total >= 60 ? Math.floor(w.total/60)+'h '+(w.total%60?w.total%60+'m':'') : (w.total?w.total+'m':'');
+    const isPast = we < today && !isCurrent;
+    const isFuture = w.ws > today;
+    let bg;
+    if(isFuture) bg = '#F5F5F5';
+    else if(w.total) bg = getColor(w.total);
+    else if(isPast) bg = '#FFD6E7';
+    else bg = getColor(0);
+    return `<div title="هفته ${i+1} — ${label}\n${totalDisp||'بدون فعالیت'}"
+      style="aspect-ratio:1;border-radius:4px;background:${bg};
+      box-shadow:${isCurrent?'0 0 0 2px #7B68EE':'none'};
+      cursor:default;transition:transform .1s"
+      onmouseover="this.style.transform='scale(1.3)'"
+      onmouseout="this.style.transform='scale(1)'">
+    </div>`;
+  }).join('');
+
+  // total year so far
+  const totalYear = weeks.reduce((s,w)=>s+w.total,0);
+  const totalDisp = totalYear >= 60 ? Math.floor(totalYear/60)+'h '+(totalYear%60?totalYear%60+'m':'') : totalYear+'m';
+  if(sub) sub.textContent = `${year} · ${catLabels[yearCat]} · جمع: ${totalDisp}`;
+}
+
+// ══ WEEKLY ACTIVITY TABLE ══
+function renderActivityTable(){
+  const wrap = document.getElementById('activity-table-wrap');
+  if(!wrap) return;
+
+  // 7 days of this week (sat to fri, Persian week)
+  const days = [];
+  const today = new Date();
+  // find Saturday of current week
+  const dow = today.getDay(); // 0=sun..6=sat
+  const satOffset = (dow >= 6) ? 0 : -(dow + 1);
+  for(let i=0; i<7; i++){
+    const d = new Date(today);
+    d.setDate(today.getDate() + satOffset + i);
+    days.push(d);
+  }
+
+  const categories = [
+    {label:'🏠 خونه',   id:'home-mins',   color:'#E67E22'},
+    {label:'📖 درس',    id:'study-mins',  color:'var(--ca)'},
+    {label:'🗣 زبان',   id:'lang-mins',   color:'#00ACC1'},
+    {label:'📗 کتاب',   id:'book-mins',   color:'var(--c9)'},
+    {label:'🏃 ورزش',   id:'workout-mins',color:'var(--c4)'},
+  ];
+
+  const DAY_SHORT = ['ش','ی','د','س','چ','پ','ج'];
+
+  // build table
+  let html = `<table style="width:100%;border-collapse:collapse;font-family:inherit;direction:rtl">`;
+
+  // header row
+  html += `<tr>`;
+  html += `<td style="font-size:11px;font-weight:700;color:var(--txl);padding:4px 6px;min-width:72px"></td>`;
+  days.forEach((d,i)=>{
+    const isToday = d.toDateString() === today.toDateString();
+    const label = DAY_SHORT[i];
+    const dayNum = new Intl.DateTimeFormat('fa-IR-u-nu-latn',{day:'numeric'}).format(d);
+    html += `<td style="text-align:center;padding:4px 3px;min-width:36px">
+      <div style="font-size:9px;font-weight:700;color:${isToday?'var(--c3d)':'var(--txl)'}">${label}</div>
+      <div style="font-size:11px;font-weight:800;color:${isToday?'var(--c3d)':'var(--txm)'};margin-top:1px">${dayNum}</div>
+    </td>`;
+  });
+  html += `<td style="text-align:center;padding:4px 3px;min-width:38px"><div style="font-size:10px;font-weight:800;color:var(--txl)">جمع</div></td>`;
+  html += `</tr>`;
+
+  // category rows
+  categories.forEach(cat=>{
+    html += `<tr style="border-top:1px solid #F5F5F5">`;
+    html += `<td style="font-size:11px;font-weight:700;padding:8px 6px 8px 2px;white-space:nowrap;color:var(--txt)">${cat.label}</td>`;
+    let weekTotal = 0;
+    days.forEach(d=>{
+      const key = 'mins-' + d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate() + '-' + cat.id;
+      const val = parseInt(load(key,'')||0)||0;
+      weekTotal += val;
+      const isToday = d.toDateString() === today.toDateString();
+      const display = val ? (val >= 60 ? (Math.floor(val/60)+'h'+(val%60?'':'')) : val+'m') : '—';
+      html += `<td style="text-align:center;padding:6px 3px">
+        <div style="font-size:11px;font-weight:${val?'800':'400'};color:${val?(isToday?cat.color:'var(--txt)'):'var(--txl)'};">${display}</div>
+        ${val && val>=60 ? `<div style="font-size:9px;color:var(--txl);margin-top:1px">${val}m</div>` : ''}
+      </td>`;
+    });
+    // weekly total
+    const totalDisplay = weekTotal ? (weekTotal >= 60 ? Math.floor(weekTotal/60)+'h '+(weekTotal%60?weekTotal%60+'m':'') : weekTotal+'m') : '—';
+    html += `<td style="text-align:center;padding:6px 3px">
+      <div style="font-size:11px;font-weight:800;color:${weekTotal?cat.color:'var(--txl)'};">${totalDisplay}</div>
+    </td>`;
+    html += `</tr>`;
+  });
+
+  html += `</table>`;
+  wrap.innerHTML = html;
+}
+
+// ══ USAGE MONITORING ══
+function todayUsageKey(){
+  const d=new Date(); return `usage-${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+}
+function loadUsage(){
+  return load(todayUsageKey(),{joint_big:0,joint_small:0,vape:0,pastil:0});
+}
+function saveUsage(data){ save(todayUsageKey(),data); }
+
+function changeUsage(type, delta){
+  const data=loadUsage();
+  data[type]=Math.max(0,(data[type]||0)+delta);
+  saveUsage(data);
+  renderUsage();
+}
+
+function renderUsage(){
+  const data=loadUsage();
+  const el_jb=document.getElementById('u-joint-big');
+  const el_js=document.getElementById('u-joint-small');
+  const el_v=document.getElementById('u-vape');
+  const el_p=document.getElementById('u-pastil');
+  if(el_jb) el_jb.textContent=data.joint_big||0;
+  if(el_js) el_js.textContent=data.joint_small||0;
+  if(el_v)  el_v.textContent=data.vape||0;
+  if(el_p)  el_p.textContent=data.pastil||0;
+
+  // total summary
+  const total=document.getElementById('usage-today-total');
+  if(total){
+    const parts=[];
+    if(data.joint_big)  parts.push(`${data.joint_big} جوینت بزرگ`);
+    if(data.joint_small)parts.push(`${data.joint_small} جوینت کوچک`);
+    if(data.vape)       parts.push(`${data.vape} پاف`);
+    if(data.pastil)     parts.push(`${data.pastil} پاستیل`);
+    total.textContent = parts.length ? parts.join(' · ') : 'هنوز چیزی ثبت نشده';
+  }
+
+  // date sub
+  const ds=document.getElementById('usage-date-sub');
+  if(ds) ds.textContent=new Intl.DateTimeFormat('fa-IR',{weekday:'long',day:'numeric',month:'long'}).format(new Date());
+
+  renderUsageChart();
+}
+
+function saveUsageNote(){
+  const d=new Date();
+  const key=`usage-note-${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+  const el=document.getElementById('usage-note');
+  if(el) save(key, el.value);
+}
+function loadUsageNote(){
+  const d=new Date();
+  const key=`usage-note-${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+  const el=document.getElementById('usage-note');
+  if(el) el.value=load(key,'')||'';
+}
+
+function renderUsageChart(){
+  const chart=document.getElementById('usage-chart');
+  const labels=document.getElementById('usage-chart-labels');
+  if(!chart||!labels) return;
+  const days=[];
+  for(let i=6;i>=0;i--){
+    const d=new Date(); d.setDate(d.getDate()-i);
+    const key=`usage-${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+    const data=load(key,{joint_big:0,joint_small:0,vape:0,pastil:0});
+    const total=(data.joint_big||0)*2+(data.joint_small||0)+(data.vape||0)*0.5+(data.pastil||0);
+    const label=new Intl.DateTimeFormat('fa-IR',{weekday:'short'}).format(d);
+    days.push({total,label,isToday:i===0});
+  }
+  const max=Math.max(...days.map(d=>d.total),1);
+  chart.innerHTML=days.map(d=>`
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
+      <div style="width:100%;background:${d.isToday?'#4CAF50':'#C8E6C9'};border-radius:6px 6px 0 0;height:${Math.max(4,Math.round(d.total/max*64))}px;transition:height .3s"></div>
+    </div>`).join('');
+  labels.innerHTML=days.map(d=>`
+    <div style="flex:1;text-align:center;font-size:9px;color:${d.isToday?'#2E7D32':'var(--txl)'};font-weight:${d.isToday?'800':'500'}">${d.label}</div>`).join('');
+}
+
+
+function saveMins(id){ save('mins-'+todayKey()+'-'+id, document.getElementById(id)?.value||''); }
+function loadAllMins(){
+  ['home-mins','study-mins','lang-mins','book-mins'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.value=load('mins-'+todayKey()+'-'+id,'')||'';
+  });
+}
+// INIT
+function init(){
+  checkReset();
+  restoreChecks('morning','list-morning');
+  restoreChecks('fixhome','fixed-home-list');
+  restoreChecks('noon','list-noon');
+  restoreChecks('night','list-night');
+  restoreChecks('whenever','list-whenever');
+  renderTasks(); renderHomeTasks();
+  loadPark(); loadEOD(); loadWorkout(); loadAllMins();
+  updateProgress(); updateHome();
+  renderCal(); renderWeekly(); renderApptList();
+  renderStudy(); renderLang(); renderBooks(); loadFilmNote(); loadDiet();
+  renderBacklog(); renderCreative(); renderBooksWant(); renderFilmsWant();
+  const htl=document.getElementById('home-time-log'); if(htl) htl.value=load('home-time-log','');
+}
+init();
+</script>
+
+<!-- ══ USAGE MONITORING ══ -->
+<div class="pg" id="pg-usage">
+
+  <div style="margin-bottom:18px">
+    <div style="font-size:22px;font-weight:900">🌿 مصرف</div>
+    <div style="font-size:12px;color:var(--txl);margin-top:2px" id="usage-date-sub">—</div>
+  </div>
+
+  <!-- TODAY LOG -->
+  <div class="card" style="overflow:visible">
+    <div class="ch" style="background:#F0FBF0;cursor:default">
+      <div class="ct"><span class="dot" style="background:#4CAF50"></span>لاگ امروز</div>
+      <div style="font-size:12px;color:var(--txl)" id="usage-today-total"></div>
+    </div>
+    <div class="cb">
+
+      <!-- جوینت بزرگ -->
+      <div style="display:flex;align-items:center;gap:12px;padding:11px 4px;border-bottom:1px solid #F5F5F5">
+        <div style="font-size:22px">🚬</div>
+        <div style="flex:1">
+          <div style="font-size:13.5px;font-weight:700">جوینت بزرگ</div>
+          <div style="font-size:11px;color:var(--txl);margin-top:1px">تعداد</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <button onclick="changeUsage('joint_big',-1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#F5F5F5;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700">−</button>
+          <span id="u-joint-big" style="font-size:20px;font-weight:900;min-width:28px;text-align:center">0</span>
+          <button onclick="changeUsage('joint_big',1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#C8E6C9;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;color:#2E7D32">+</button>
+        </div>
+      </div>
+
+      <!-- جوینت کوچک -->
+      <div style="display:flex;align-items:center;gap:12px;padding:11px 4px;border-bottom:1px solid #F5F5F5">
+        <div style="font-size:22px">🪄</div>
+        <div style="flex:1">
+          <div style="font-size:13.5px;font-weight:700">جوینت کوچک</div>
+          <div style="font-size:11px;color:var(--txl);margin-top:1px">تعداد</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <button onclick="changeUsage('joint_small',-1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#F5F5F5;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700">−</button>
+          <span id="u-joint-small" style="font-size:20px;font-weight:900;min-width:28px;text-align:center">0</span>
+          <button onclick="changeUsage('joint_small',1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#C8E6C9;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;color:#2E7D32">+</button>
+        </div>
+      </div>
+
+      <!-- ویپ -->
+      <div style="display:flex;align-items:center;gap:12px;padding:11px 4px;border-bottom:1px solid #F5F5F5">
+        <div style="font-size:22px">💨</div>
+        <div style="flex:1">
+          <div style="font-size:13.5px;font-weight:700">ویپ</div>
+          <div style="font-size:11px;color:var(--txl);margin-top:1px">تعداد پاف</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <button onclick="changeUsage('vape',-1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#F5F5F5;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700">−</button>
+          <span id="u-vape" style="font-size:20px;font-weight:900;min-width:28px;text-align:center">0</span>
+          <button onclick="changeUsage('vape',1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#C8E6C9;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;color:#2E7D32">+</button>
+        </div>
+      </div>
+
+      <!-- پاستیل -->
+      <div style="display:flex;align-items:center;gap:12px;padding:11px 4px">
+        <div style="font-size:22px">🍬</div>
+        <div style="flex:1">
+          <div style="font-size:13.5px;font-weight:700">پاستیل</div>
+          <div style="font-size:11px;color:var(--txl);margin-top:1px">تعداد</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <button onclick="changeUsage('pastil',-1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#F5F5F5;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700">−</button>
+          <span id="u-pastil" style="font-size:20px;font-weight:900;min-width:28px;text-align:center">0</span>
+          <button onclick="changeUsage('pastil',1)" style="width:32px;height:32px;border-radius:50%;border:none;background:#C8E6C9;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;color:#2E7D32">+</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOTE -->
+  <div class="card">
+    <div class="ch" style="background:#F9FBE7;cursor:default">
+      <div class="ct"><span class="dot" style="background:#AFB42B"></span>یادداشت امروز</div>
+    </div>
+    <div class="cb">
+      <textarea class="ta" id="usage-note" placeholder="چطور بود؟ حالت، دوز، موقعیت..." rows="3" oninput="saveUsageNote()" style="min-height:70px"></textarea>
+    </div>
+  </div>
+
+  <!-- WEEKLY CHART -->
+  <div class="card">
+    <div class="ch" onclick="toggleCard(this)" style="background:#F3E5F5">
+      <div class="ct"><span class="dot" style="background:#9C27B0"></span>تاریخچه ۷ روز</div>
+      <span class="arr">▲</span>
+    </div>
+    <div class="cb">
+      <div id="usage-chart" style="display:flex;align-items:flex-end;gap:6px;height:80px;padding:8px 4px 0"></div>
+      <div id="usage-chart-labels" style="display:flex;gap:6px;padding:4px 4px 0;margin-top:4px"></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
